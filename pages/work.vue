@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full min-h-screen grid grid-cols-1 md:grid-cols-2 text-white">
     <div class="font-bold text-left flex items-center justify-center w-full p-6">
-      <div class="md:min-w-[400px] min-w-[200px]">
+      <div class="md:min-w-[400px] min-w-[250px] max-w-full">
         <ProjectCard :project="projects[currentProject]" />
       </div>
     </div>

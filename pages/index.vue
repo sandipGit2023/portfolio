@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full min-h-screen inset-0 grid grid-cols-1 md:grid-cols-2 text-white">
+  <div class="w-full h-full min-h-screen grid grid-cols-1 md:grid-cols-2 text-white">
     <div class="font-bold text-left flex items-center md:justify-center justify-start w-full p-6">
       <div>
         <h2 class="md:text-2xl text-md uppercase hidden md:block">

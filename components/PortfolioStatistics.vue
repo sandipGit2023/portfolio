@@ -1,9 +1,9 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <div v-for="(stat, index) in stats" :key="index" class="text-center">
-      <div class="text-6xl font-extrabold flex justify-start items-start gap-2">
+      <div class="md:text-6xl text-5xl font-extrabold flex justify-start items-start gap-4">
         <span>{{ counters[index] }}</span>
-        <span class="text-xl font-medium text-gray-400 max-w-[100px]">{{ stat.text }}</span>
+        <span class="md:text-xl text-lg font-medium text-gray-400 md:max-w-[100px] max-w-[120px] text-left">{{ stat.text }}</span>
       </div>
       <div class="mt-1 w-[35px] h-[1px] bg-white" />
     </div>

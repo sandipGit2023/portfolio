@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full min-h-screen inset-0 grid grid-cols-1 md:grid-cols-2 text-white">
+  <div class="w-full h-full min-h-screen grid grid-cols-1 md:grid-cols-2 text-white">
     <div class="font-bold text-left flex items-center justify-center w-full p-6">
       <div>
         <h1 class="md:text-7xl text-4xl capitalize my-[20px]">
