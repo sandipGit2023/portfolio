@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+    --tw-color-primary: #1c1c22;
+    --tw-color-accent: #00ff99;
+    --tw-color-accent-hover: #00e187;
+}
+
+@theme static {
+    --color-green-50: #EFFDF5;
+    --color-green-100: #D9FBE8;
+    --color-green-200: #B3F5D1;
+    --color-green-300: #75EDAE;
+    --color-green-400: #00DC82;
+    --color-green-500: #00C16A;
+    --color-green-600: #00A155;
+    --color-green-700: #007F45;
+    --color-green-800: #016538;
+    --color-green-900: #0A5331;
+    --color-green-950: #052E16;
+
+    --ui-bg-primary: #1f1f1f;
+    --ui-bg-hover: #292929;
+    --ui-bg-elevated: #232329;
+    --ui-radius: 8px;
+
+    --ui-text-muted: #6b7280; /* Muted text color (e.g., gray-500) */
+    --ui-text: #ffffff;       /* Default text color (e.g., white) */
+    --ui-bg: #1f2937;         /* Background color (e.g., gray-800) */
+}
+
+@layer utilities {
+    .bg-primary {
+        background-color: var(--tw-color-primary);
+    }
+
+    .text-accent {
+        color: var(--tw-color-accent);
+    }
+
+    .bg-accent {
+        background-color: var(--tw-color-accent);
+    }
+
+    .hover\:bg-accent-hover:hover {
+        background-color: var(--tw-color-accent-hover);
+    }
+
+    .border-accent {
+        border-color: var(--tw-color-accent);
+    }
+
+    .hover\:border-accent-hover:hover {
+        border-color: var(--tw-color-accent-hover);
+    }
+}
