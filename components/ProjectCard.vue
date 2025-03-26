@@ -5,11 +5,11 @@
   <h2 class="mt-8 md:text-[42px] text-2xl font-bold leading-none group-hover:text-accent transition-all duration-500 capitalize text-white">
     project <span>{{ project.name }}</span>
   </h2>
-  <p class="text-white/60 max-w-[500px] py-4">
+  <p class="text-white/60 max-w-[300px] md:max-w-[500px] py-2 md:py-4 text-sm md:text-base">
     {{ project.description }}
   </p>
   <ul class="flex md:gap-4 gap-2 mb-4">
-    <li v-for="(stock, index) in project.stock" :key="index" class="text-xl text-accent capitalize">
+    <li v-for="(stock, index) in project.stock" :key="index" class="md:text-xl text-lg text-accent capitalize">
       {{ stock }}<span v-if="index !== project.stock.length - 1">,</span>
     </li>
   </ul>

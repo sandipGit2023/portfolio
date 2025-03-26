@@ -10,7 +10,7 @@
       <div
         v-for="(para, index) in project.description"
         :key="index"
-        class="md:text-lg text-sm leading-relaxed opacity-0 whitespace-pre-wrap transition-transform duration-500 ease-in-out"
+        class="text-white/60 text-sm md:text-base leading-relaxed opacity-0 whitespace-pre-wrap transition-transform duration-500 ease-in-out"
         :class="{ 'fade-in': typedParagraphs[index], 'slide-in': typedParagraphs[index] }"
       >
         <span class="typing">{{ typedParagraphs[index] }}</span>
