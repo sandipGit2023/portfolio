@@ -52,17 +52,17 @@ let isDeleting = false
 const items = [
   {
     label: 'Skills',
-    icon: 'i-lucide-user',
+    icon: 'i-lucide-lightbulb',
     slot: 'skills',
   },
   {
     label: 'experience',
-    icon: 'i-lucide-lock',
+    icon: 'i-lucide-badge-check',
     slot: 'education',
   },
   {
     label: 'About me',
-    icon: 'i-lucide-lock',
+    icon: 'i-lucide-user',
     slot: 'about',
   },
 ]
