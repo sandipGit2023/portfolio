@@ -1,19 +1,26 @@
 <template>
-  <div class="md:min-h-screen min-h-[500px] flex flex-col items-center justify-start text-white md:p-4">
-    <div class="md:block top-40 hidden flex-col fixed max-w-2xl text-left">
-      <h1 class="text-4xl font-bold tracking-wide">
+  <div class="min-h-screen flex flex-col items-start justify-start text-white p-6 lg:p-8">
+    <!-- Project Header -->
+    <div class="w-full max-w-4xl mb-12">
+      <h1 class="text-3xl lg:text-5xl font-bold tracking-wide leading-tight mb-4">
         {{ project.title }}
       </h1>
-      <span class="block mt-4 text-sm text-accent">{{ project.year }}</span>
+      <div class="flex items-center gap-4">
+        <span class="text-accent text-lg font-medium">{{ project.year }}</span>
+        <div class="w-16 h-[2px] bg-accent"></div>
+      </div>
     </div>
-    <div class="max-w-2xl text-left space-y-6 md:mt-70">
+
+    <!-- Project Description -->
+    <div class="w-full max-w-4xl space-y-8">
       <div
         v-for="(para, index) in project.description"
         :key="index"
-        class="text-white/60 text-sm md:text-base leading-relaxed opacity-0 whitespace-pre-wrap transition-transform duration-500 ease-in-out"
-        :class="{ 'fade-in': typedParagraphs[index], 'slide-in': typedParagraphs[index] }"
+        class="text-white/70 text-base lg:text-lg leading-relaxed opacity-0 transition-all duration-700 ease-out"
+        :class="{ 'opacity-100 slide-up': typedParagraphs[index] }"
+        :style="{ transitionDelay: `${index * 200}ms` }"
       >
-        <span class="typing">{{ typedParagraphs[index] }}</span>
+        <p class="whitespace-pre-wrap">{{ typedParagraphs[index] }}</p>
       </div>
     </div>
   </div>
@@ -31,10 +38,11 @@ const props = defineProps({
 
 const typedParagraphs = ref([])
 let typingIntervals = []
+
 const typeParagraph = (text, index) => {
   return new Promise((resolve) => {
     let i = 0
-    const speed = 30
+    const speed = 25 // Slightly faster typing
 
     typedParagraphs.value[index] = ''
 
@@ -53,10 +61,12 @@ const typeParagraph = (text, index) => {
 }
 
 const startTyping = async() => {
+  // Clear any existing intervals
   typingIntervals.forEach(clearInterval)
   typingIntervals = []
   typedParagraphs.value = []
 
+  // Type each paragraph sequentially
   for (let i = 0; i < props.project.description.length; i++) {
     await typeParagraph(props.project.description[i], i)
   }
@@ -66,23 +76,18 @@ watchEffect(startTyping)
 </script>
 
 <style scoped>
-.opacity-0 {
-  opacity: 0;
+.slide-up {
+  animation: slideUp 0.6s ease-out forwards;
 }
 
-.fade-in {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.typing {
-  display: inline-block;
-  white-space: pre-wrap;
-}
-
-.slide-in {
-  transform: translateY(10px);
-  opacity: 1;
-  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>

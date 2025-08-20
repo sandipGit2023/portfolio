@@ -1,25 +1,49 @@
 <template>
-  <div class="w-full h-full min-h-screen grid grid-cols-1 md:grid-cols-2 text-white">
-    <div class="font-bold text-left flex items-center justify-center w-full p-6">
-      <div class="md:min-w-[400px] min-w-[250px] max-w-full">
-        <ProjectCard :project="projects[currentProject]" />
+  <div class="w-full h-full min-h-screen relative overflow-hidden bg-gradient-to-br from-primary via-primary to-black">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div class="absolute top-1/2 right-1/4 w-48 h-48 bg-accent/8 rounded-full blur-2xl animate-pulse delay-500"></div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
+      <!-- Left Column - Project Info -->
+      <div class="flex items-center lg:justify-center justify-start w-full p-6 lg:p-12">
+        <div class="lg:min-w-[400px] min-w-[250px] max-w-full animate-fade-in">
+          <ProjectCard :project="projects[currentProject]" />
+        </div>
+      </div>
+
+      <!-- Right Column - Project Details -->
+      <div class="flex items-center justify-center w-full p-6 lg:p-12">
+        <div class="w-full max-w-4xl animate-scale-in">
+          <ProjectDetailsCard :project="currentProjectDetail" />
+        </div>
       </div>
     </div>
 
-    <div class="hidden md:block absolute left-235 top-[115px] h-[250px] w-[2px] bg-white" />
-    <div class="absolute md:left-228 md:top-88 right-5 top-5 items-center justify-start gap-4 md:mt-20">
+    <!-- Navigation Button - Bottom Left -->
+    <div class="absolute bottom-8 left-8 z-20">
       <button
-        class="group border-2 rounded-full py-2 px-4 h-15 flex items-center justify-center gap-2 capitalize hover:border-accent-hover hover:bg-accent-hover transition-all duration-500 cursor-pointer"
+        class="group relative overflow-hidden border-2 border-white text-white font-bold w-16 h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow"
         @click="nextProject"
+        aria-label="Next project"
       >
-        <IconsRightArrow class="group-hover:text-black" />
+        <IconsRightArrow class="w-6 h-6 group-hover:scale-110 transition-all duration-300" />
       </button>
     </div>
-    <div class="hidden md:block absolute left-235 bottom-[115px] w-[2px] h-[250px] bg-white" />
 
-    <div class="flex items-center justify-center w-full p-6">
-      <ProjectDetailsCard :project="currentProjectDetail" />
+    <!-- Project Counter -->
+    <div class="absolute bottom-6 right-6 text-white/60 text-sm font-medium bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 animate-fade-in">
+      {{ currentProject + 1 }} / {{ projects.length }}
     </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute top-10 right-10 w-4 h-4 bg-accent rounded-full animate-bounce"></div>
+    <div class="absolute bottom-20 left-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000"></div>
+    <div class="absolute top-1/3 left-1/4 w-2 h-2 bg-accent/40 rounded-full animate-bounce delay-500"></div>
   </div>
 </template>
 
@@ -52,7 +76,7 @@ const projectDetailDescription = ref([
       'Jib redefines app creation — users describe their needs, and Jib builds custom SaaS solutions instantly.',
       'Integrated AI generates content, designs interfaces, and connects APIs, making development accessible to non-technical users.',
       'From e-commerce to fitness trackers, Jib empowers entrepreneurs to bring ideas to life without coding expertise.',
-      'Jib’s advanced workflow automation and real-time integrations create scalable, production-ready apps in minutes.',
+      'Jib\'s advanced workflow automation and real-time integrations create scalable, production-ready apps in minutes.',
       'With continuous AI advancements, Jib stays future-proof, ensuring businesses remain competitive and adaptable.',
     ],
     year: '2022-2024',
@@ -77,7 +101,7 @@ const projectDetailDescription = ref([
       'It empowers restaurants to enhance customer experiences, optimize workflows, and boost revenue with real-time insights.',
       'With self-service kiosks and mobile ordering, Eatcard reduces wait times, improving service speed and satisfaction.',
       'Comprehensive admin control, reporting, and third-party integrations make Eatcard a one-stop operational powerhouse.',
-      'Eatcard’s AI-enhanced recommendations personalize the dining experience, increasing loyalty and customer satisfaction.',
+      'Eatcard\'s AI-enhanced recommendations personalize the dining experience, increasing loyalty and customer satisfaction.',
     ],
     year: '2023-2025',
   },
@@ -108,17 +132,42 @@ const nextProject = () => {
 </script>
 
 <style scoped>
-.typing {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #fff;
-  animation: blink 0.7s infinite;
+/* Custom animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
+.animate-scale-in {
+  animation: scaleIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
 }
 </style>

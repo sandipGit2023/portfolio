@@ -1,66 +1,104 @@
 <template>
-  <div class="w-full h-full min-h-screen grid grid-cols-1 md:grid-cols-2 text-white">
-    <div class="font-bold text-left flex items-center justify-center w-full p-6">
-      <div>
-        <h1 class="md:text-7xl text-4xl capitalize my-[20px]">
-          contact
-        </h1>
-        <h2 class="md:text-2xl text-md capitalize">
-          <span class="block w-[150px] min-h-[1.5em] relative">
-            <span class="typing top-0 left-0 absolute text-accent">{{ currentText }}</span>
-            <span class="invisible">software developer</span>
-          </span>
-        </h2>
-        <h1 class="text-white/60 max-w-[500px] py-4">
-          Have a project or idea in mind? Let’s team up to create intuitive, high-performance solutions that drive results.
-        </h1>
-      </div>
+  <div class="w-full h-full min-h-screen relative overflow-hidden bg-gradient-to-br from-primary via-primary to-black">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-accent/8 rounded-full blur-2xl animate-pulse delay-500"></div>
     </div>
-    <div class="absolute left-235 bottom-0 top-1/2 -translate-y-1/2 w-[2px] h-[700px] bg-white hidden md:block" />
 
-    <div class="flex md:items-center md:justify-center md:w-full md:p-20 p-6">
-      <div class="max-w-2xl">
-        <div class="flex md:flex-row flex-col items-left gap-4">
-          <div class="text-green-400">
-            <IconsPhone />
-          </div>
-          <div>
-            <p class="text-gray-400 text-sm">
-              Phone
-            </p>
-            <p class="font-medium">
-              (+91) 917 342 0297
-            </p>
-          </div>
-        </div>
-        <div class="flex md:flex-row flex-col items-left gap-4 my-10">
-          <div class="text-green-400">
-            <IconsEmail />
-          </div>
-          <div>
-            <p class="text-gray-400 text-sm">
-              Email
-            </p>
-            <p class="font-medium">
-              ghodasarasandip011@gmail.com
-            </p>
-          </div>
-        </div>
-        <div class="flex md:flex-row flex-col items-left gap-4">
-          <div class="text-green-400">
-            <IconsLocation />
-          </div>
-          <div>
-            <p class="text-gray-400 text-sm">
-              Address
-            </p>
-            <p class="font-medium">
-              Gota, Ahmedabad, Gujarat
+    <!-- Grid Layout -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
+      <!-- Left Column - Content -->
+      <div class="flex items-center lg:justify-center justify-start w-full p-6 lg:p-12">
+        <div class="max-w-lg animate-fade-in">
+          <div class="space-y-6 mb-12">
+            <h1 class="lg:text-8xl text-6xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
+              Contact
+            </h1>
+            <h2 class="lg:text-2xl text-lg capitalize mb-6 text-accent font-bold tracking-wider">
+              <span class="block w-[200px] min-h-[1.5em] relative">
+                <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
+                <span class="invisible">software developer</span>
+              </span>
+            </h2>
+            <p class="text-white/80 max-w-[500px] py-4 text-lg leading-relaxed animate-slide-up delay-300">
+              Have a project or idea in mind? Let's team up to create intuitive, high-performance solutions that drive results.
             </p>
           </div>
         </div>
       </div>
+
+      <!-- Right Column - Contact Info -->
+      <div class="flex items-center justify-center w-full p-6 lg:p-12">
+        <div class="w-full max-w-2xl space-y-8 animate-scale-in">
+          <!-- Phone -->
+          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+            <div class="flex items-center gap-6">
+              <div class="relative">
+                <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <IconsPhone class="w-6 h-6" />
+                </div>
+                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20"></div>
+              </div>
+              <div>
+                <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
+                  Phone
+                </p>
+                <p class="font-bold text-xl text-white group-hover:text-accent transition-colors duration-300">
+                  (+91) 917 342 0297
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+            <div class="flex items-center gap-6">
+              <div class="relative">
+                <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <IconsEmail class="w-6 h-6" />
+                </div>
+                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20 delay-300"></div>
+              </div>
+              <div>
+                <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
+                  Email
+                </p>
+                <p class="font-bold text-lg text-white group-hover:text-accent transition-colors duration-300 break-all">
+                  ghodasarasandip011@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+            <div class="flex items-center gap-6">
+              <div class="relative">
+                <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <IconsLocation class="w-6 h-6" />
+                </div>
+                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20 delay-700"></div>
+              </div>
+              <div>
+                <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
+                  Address
+                </p>
+                <p class="font-bold text-xl text-white group-hover:text-accent transition-colors duration-300">
+                  Gota, Ahmedabad, Gujarat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute top-10 left-10 w-4 h-4 bg-accent rounded-full animate-bounce"></div>
+    <div class="absolute bottom-20 right-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000"></div>
+    <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-accent/40 rounded-full animate-bounce delay-500"></div>
   </div>
 </template>
 
@@ -95,22 +133,84 @@ onMounted(() => typeEffect())
 
 <style scoped>
 .typing {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #fff;
-    animation: blink 0.7s infinite;
-    transition: width 0.2s ease;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00ff99;
+  animation: blink 0.7s infinite;
+  transition: width 0.2s ease;
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
+  }
 }
 
 span.invisible {
-    visibility: hidden;
-    pointer-events: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Custom animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
 }
 </style>

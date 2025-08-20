@@ -1,73 +1,146 @@
 <template>
-  <div class="w-full h-full min-h-screen grid grid-cols-1 md:grid-cols-2 text-white">
-    <div class="font-bold text-left flex items-center md:justify-center justify-start w-full p-6">
-      <div>
-        <h2 class="md:text-2xl text-md uppercase hidden md:block">
-          <span class="block w-[150px] min-h-[1.5em] relative">
-            <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
-            <span class="invisible">software developer</span>
-          </span>
-        </h2>
-        <h1 class="md:text-7xl text-4xl capitalize my-[20px]">
-          Hello, I'm
-        </h1>
-        <h1 class="md:text-7xl text-4xl capitalize text-accent">
-          Sandip
-        </h1>
-        <h2 class="md:text-2xl text-md uppercase block md:hidden mt-5">
-          <span class="block w-[150px] min-h-[1.5em] relative">
-            <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
-            <span class="invisible">software developer</span>
-          </span>
-        </h2>
+  <div class="w-full h-full min-h-screen relative overflow-hidden bg-gradient-to-br from-primary via-primary to-black">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-accent/8 rounded-full blur-2xl animate-pulse delay-500"></div>
+    </div>
 
-        <div class="flex items-center justify-start gap-4 md:mt-40 mt-10">
-          <NuxtLink
-            href="/cv/Sandip_Ghodasara_Int_new.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download="Sandip_Ghodasara_CV.pdf"
-            class="group border-2 rounded-full py-2 px-4 h-12 flex items-center justify-center gap-2 uppercase hover:border-accent-hover hover:bg-accent-hover transition-all duration-500 cursor-pointer"
-          >
-            <span class="group-hover:text-black">Download CV</span>
-            <Icon name="prime:download" class="w-5 h-5 group-hover:bg-black" />
-          </NuxtLink>
+    <!-- Grid Layout -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
+      <!-- Left Column - Content -->
+      <div class="flex items-center lg:justify-center justify-start w-full p-6 lg:p-12">
+        <div class="max-w-lg animate-fade-in">
+          <div class="mb-8">
+            <h2 class="lg:text-2xl text-lg uppercase hidden lg:block mb-4 text-accent font-bold tracking-wider">
+              <span class="block w-[200px] min-h-[1.5em] relative">
+                <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
+                <span class="invisible">software developer</span>
+              </span>
+            </h2>
+          </div>
 
-          <div class="mx-4 w-[20px] h-[1px] bg-white hidden md:block" />
+          <div class="space-y-4 mb-12">
+            <h1 class="lg:text-8xl text-6xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
+              Hello, I'm
+            </h1>
+            <h1 class="lg:text-8xl text-6xl capitalize leading-tight font-black text-accent animate-slide-up delay-200">
+              Sandip
+            </h1>
+          </div>
 
-          <NuxtLink
-            to="https://github.com/sandipGit2023"
-            target="_blank"
-            class="group border-2 rounded-full w-12 h-12 flex items-center justify-center hover:border-accent-hover hover:bg-accent-hover transition-all duration-500 cursor-pointer"
-          >
-            <Icon name="prime:github" class="w-9 h-9 bg-white group-hover:bg-black transition-all duration-500" />
-          </NuxtLink>
-          <NuxtLink
-            to="https://linkedin.com/in/ghodasara-sandip"
-            target="_blank"
-            class="group border-2 rounded-full w-12 h-12 flex items-center justify-center hover:border-accent-hover hover:bg-accent-hover transition-all duration-500 cursor-pointer"
-          >
-            <Icon
-              name="basil:linkedin-solid"
-              class="w-6 h-6 bg-white group-hover:bg-black transition-all duration-500"
-            />
-          </NuxtLink>
+          <h2 class="lg:text-2xl text-lg uppercase block lg:hidden mt-6 mb-8 text-accent font-bold">
+            <span class="block w-[200px] min-h-[1.5em] relative">
+              <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
+              <span class="invisible">software developer</span>
+            </span>
+          </h2>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:mt-20 mt-12">
+            <NuxtLink
+              href="/cv/Sandip_Ghodasara_Int_new.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Sandip_Ghodasara_CV.pdf"
+              class="group relative overflow-hidden border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer text-sm uppercase tracking-wider hover:shadow-glow"
+            >
+              <span class="relative z-10">Download CV</span>
+              <Icon name="prime:download" class="relative z-10 w-5 h-5 ml-2" />
+            </NuxtLink>
+
+            <div class="hidden sm:block mx-4 w-[20px] h-[1px] bg-white/30" />
+
+            <div class="flex gap-4">
+              <NuxtLink
+                to="https://github.com/sandipGit2023"
+                target="_blank"
+                class="group relative overflow-hidden border-2 border-white text-white font-bold w-16 h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow"
+              >
+                <Icon name="prime:github" class="w-8 h-8 group-hover:scale-110 transition-all duration-300" />
+              </NuxtLink>
+              <NuxtLink
+                to="https://linkedin.com/in/ghodasara-sandip"
+                target="_blank"
+                class="group relative overflow-hidden border-2 border-white text-white font-bold w-16 h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow"
+              >
+                <Icon
+                  name="basil:linkedin-solid"
+                  class="w-6 h-6 group-hover:scale-110 transition-all duration-300"
+                />
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Image & Stats Only -->
+      <div class="flex items-center lg:justify-center w-full p-6 lg:p-12">
+        <div class="w-full max-w-2xl animate-fade-in delay-500">
+          <!-- Profile Image -->
+          <div class="flex items-center justify-center mb-8">
+            <div class="relative">
+              <div class="w-48 h-48 rounded-full bg-gradient-to-br from-accent to-accent-dark p-1 animate-pulse">
+                <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover">
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <!-- Experience Card -->
+            <div class="group relative">
+              <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-accent/20 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+                <div class="text-center">
+                  <div class="text-4xl font-black text-accent mb-3 group-hover:scale-110 transition-transform duration-500">
+                    4+
+                  </div>
+                  <div class="text-sm font-bold text-white/80 uppercase tracking-wider">
+                    Years of Experience
+                  </div>
+                  <div class="w-12 h-1 bg-accent mx-auto mt-3 group-hover:w-16 transition-all duration-500"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projects Card -->
+            <div class="group relative">
+              <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-accent/20 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+                <div class="text-center">
+                  <div class="text-4xl font-black text-accent mb-3 group-hover:scale-110 transition-transform duration-500">
+                    6+
+                  </div>
+                  <div class="text-sm font-bold text-white/80 uppercase tracking-wider">
+                    Projects Completed
+                  </div>
+                  <div class="w-12 h-1 bg-accent mx-auto mt-3 group-hover:w-16 transition-all duration-500"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills Card -->
+            <div class="group relative">
+              <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-accent/20 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+                <div class="text-center">
+                  <div class="text-4xl font-black text-accent mb-3 group-hover:scale-110 transition-transform duration-500">
+                    5+
+                  </div>
+                  <div class="text-sm font-bold text-white/80 uppercase tracking-wider">
+                    Tech<br>Expertise
+                  </div>
+                  <div class="w-12 h-1 bg-accent mx-auto mt-3 group-hover:w-16 transition-all duration-500"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="absolute left-235 bottom-0 top-1/2 -translate-y-1/2 w-[2px] h-[700px] bg-white hidden md:block" />
-
-    <div class="flex flex-col items-center md:justify-center w-full p-6">
-      <div class="mb-20 relative hidden md:block">
-        <div class="animated-ring" />
-        <img src="@/assets/images/sandip_img.png" alt="sandip" class="w-[350px] relative z-10 rounded-full">
-      </div>
-
-      <div class="md:px-20 w-full">
-        <PortfolioStatistics />
-      </div>
-    </div>
+    <!-- Floating Elements -->
+    <div class="absolute top-10 right-10 w-4 h-4 bg-accent rounded-full animate-bounce"></div>
+    <div class="absolute bottom-20 left-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000"></div>
+    <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-accent/40 rounded-full animate-bounce delay-500"></div>
   </div>
 </template>
 
@@ -106,7 +179,7 @@ onMounted(() => typeEffect())
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #fff;
+  border-right: 3px solid #00ff99;
   animation: blink 0.7s infinite;
   transition: width 0.2s ease;
 }
@@ -122,35 +195,46 @@ span.invisible {
   pointer-events: none;
 }
 
-/* Glowing, rotating animated ring */
-.animated-ring {
-  position: absolute;
-  width: 350px;
-  height: 360px;
-  border-radius: 50%;
-  border: 4px solid transparent;
-  box-shadow: 0 0 20px #00ff99, 0 0 30px #00ff99;
-  animation: spin 10s linear infinite, pulse 2s ease-in-out infinite alternate;
-  z-index: 1;
+/* Custom animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
 }
 
-/* Smooth rotation animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  100% {
-    transform: rotate(360deg);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Pulse glow effect */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  100% {
-    box-shadow: 0 0 30px #00ff99, 0 0 60px #00ff99;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
 }
 </style>
