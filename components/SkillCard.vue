@@ -8,7 +8,7 @@
       <div class="flex flex-col items-center justify-center text-center space-y-4">
         <div class="relative">
           <Icon :name="item.icon" class="text-6xl lg:text-7xl text-accent group-hover:scale-110 group-hover:rotate-12 transition-all duration-500" />
-          <div class="absolute inset-0 bg-accent/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="absolute inset-0 bg-accent/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500" />
         </div>
         <p class="font-bold text-white capitalize group-hover:text-accent transition-all duration-300 text-sm lg:text-base">
           {{ item.lable }}
@@ -16,8 +16,8 @@
       </div>
 
       <!-- Animated background elements -->
-      <div class="absolute top-2 right-2 w-2 h-2 bg-accent/40 rounded-full animate-ping"></div>
-      <div class="absolute bottom-2 left-2 w-1 h-1 bg-accent/60 rounded-full animate-ping delay-1000"></div>
+      <div class="absolute top-2 right-2 w-2 h-2 bg-accent/40 rounded-full animate-ping" />
+      <div class="absolute bottom-2 left-2 w-1 h-1 bg-accent/60 rounded-full animate-ping delay-1000" />
     </div>
   </div>
 </template>

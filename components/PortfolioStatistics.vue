@@ -7,12 +7,12 @@
             <span class="text-accent group-hover:scale-110 transition-transform duration-500 animate-pulse">{{ counters[index] }}</span>
             <span class="text-sm lg:text-base font-bold text-white/80 text-center leading-tight group-hover:text-accent transition-colors duration-300">{{ stat.text }}</span>
           </div>
-          <div class="w-12 h-[2px] bg-gradient-to-r from-accent to-accent-dark mx-auto group-hover:w-16 transition-all duration-500 rounded-full"></div>
+          <div class="w-12 h-[2px] bg-gradient-to-r from-accent to-accent-dark mx-auto group-hover:w-16 transition-all duration-500 rounded-full" />
         </div>
 
         <!-- Animated background elements -->
-        <div class="absolute top-2 right-2 w-1 h-1 bg-accent/40 rounded-full animate-ping"></div>
-        <div class="absolute bottom-2 left-2 w-1 h-1 bg-accent/60 rounded-full animate-ping delay-1000"></div>
+        <div class="absolute top-2 right-2 w-1 h-1 bg-accent/40 rounded-full animate-ping" />
+        <div class="absolute bottom-2 left-2 w-1 h-1 bg-accent/60 rounded-full animate-ping delay-1000" />
       </div>
     </div>
   </div>

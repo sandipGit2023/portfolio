@@ -2,9 +2,9 @@
   <div class="w-full h-full min-h-screen relative overflow-hidden bg-gradient-to-br from-primary via-primary to-black">
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-accent/8 rounded-full blur-2xl animate-pulse delay-500"></div>
+      <div class="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse" />
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-accent/8 rounded-full blur-2xl animate-pulse delay-500" />
     </div>
 
     <!-- Grid Layout -->
@@ -39,7 +39,7 @@
                 <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
                   <IconsPhone class="w-6 h-6" />
                 </div>
-                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20"></div>
+                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20" />
               </div>
               <div>
                 <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
@@ -59,7 +59,7 @@
                 <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
                   <IconsEmail class="w-6 h-6" />
                 </div>
-                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20 delay-300"></div>
+                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20 delay-300" />
               </div>
               <div>
                 <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
@@ -79,7 +79,7 @@
                 <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
                   <IconsLocation class="w-6 h-6" />
                 </div>
-                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20 delay-700"></div>
+                <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20 delay-700" />
               </div>
               <div>
                 <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
@@ -96,9 +96,9 @@
     </div>
 
     <!-- Floating Elements -->
-    <div class="absolute top-10 left-10 w-4 h-4 bg-accent rounded-full animate-bounce"></div>
-    <div class="absolute bottom-20 right-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000"></div>
-    <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-accent/40 rounded-full animate-bounce delay-500"></div>
+    <div class="absolute top-10 left-10 w-4 h-4 bg-accent rounded-full animate-bounce" />
+    <div class="absolute bottom-20 right-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000" />
+    <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-accent/40 rounded-full animate-bounce delay-500" />
   </div>
 </template>
 

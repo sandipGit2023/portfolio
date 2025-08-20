@@ -27,7 +27,7 @@
       </span>
     </div>
 
-    <div class="w-full h-[2px] bg-gradient-to-r from-accent via-accent-dark to-transparent group-hover:scale-x-110 transition-transform duration-500 origin-left"></div>
+    <div class="w-full h-[2px] bg-gradient-to-r from-accent via-accent-dark to-transparent group-hover:scale-x-110 transition-transform duration-500 origin-left" />
   </div>
 </template>
 

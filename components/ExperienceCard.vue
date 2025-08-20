@@ -8,8 +8,8 @@
       <div class="flex items-start gap-3">
         <!-- Timeline dot -->
         <div class="relative mt-1">
-          <div class="w-3 h-3 bg-accent rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-          <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping"></div>
+          <div class="w-3 h-3 bg-accent rounded-full group-hover:scale-125 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping" />
         </div>
 
         <!-- Content -->
@@ -34,7 +34,7 @@
       </div>
 
       <!-- Hover line effect -->
-      <div class="absolute bottom-0 left-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-500"></div>
+      <div class="absolute bottom-0 left-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-500" />
     </div>
   </div>
 </template>

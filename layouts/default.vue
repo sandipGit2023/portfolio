@@ -2,8 +2,8 @@
   <div class="bg-gradient-to-br from-primary via-primary to-black min-h-screen font-mono flex flex-col lg:flex-row relative overflow-hidden">
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-10 left-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl animate-pulse"></div>
-      <div class="absolute bottom-10 right-10 w-24 h-24 bg-accent/8 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div class="absolute top-10 left-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl animate-pulse" />
+      <div class="absolute bottom-10 right-10 w-24 h-24 bg-accent/8 rounded-full blur-xl animate-pulse delay-1000" />
     </div>
 
     <!-- Navigation Sidebar -->
@@ -23,7 +23,7 @@
           <div
             v-if="$route.path === link.to"
             class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-accent rounded-full animate-pulse shadow-glow"
-          ></div>
+          />
 
           <span class="text-sm lg:text-base font-black tracking-widest relative z-10">
             {{ link.label }}

@@ -7,9 +7,9 @@
           alt="Sandip Ghodasara"
           class="w-32 h-32 rounded-full border-4 border-accent transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
         >
-        <div class="absolute inset-0 rounded-full border-4 border-accent/30 animate-pulse group-hover:scale-110 transition-transform duration-500"></div>
-        <div class="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-bounce"></div>
-        <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-accent/60 rounded-full animate-bounce delay-1000"></div>
+        <div class="absolute inset-0 rounded-full border-4 border-accent/30 animate-pulse group-hover:scale-110 transition-transform duration-500" />
+        <div class="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-bounce" />
+        <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-accent/60 rounded-full animate-bounce delay-1000" />
       </div>
 
       <div class="space-y-3">
@@ -42,11 +42,11 @@
     </div>
 
     <!-- Animated background elements -->
-    <div class="absolute top-6 right-6 w-3 h-3 bg-accent/40 rounded-full animate-ping"></div>
-    <div class="absolute bottom-6 left-6 w-2 h-2 bg-accent/60 rounded-full animate-ping delay-1000"></div>
+    <div class="absolute top-6 right-6 w-3 h-3 bg-accent/40 rounded-full animate-ping" />
+    <div class="absolute bottom-6 left-6 w-2 h-2 bg-accent/60 rounded-full animate-ping delay-1000" />
 
     <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
   </div>
 </template>
 

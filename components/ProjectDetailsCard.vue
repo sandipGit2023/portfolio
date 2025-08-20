@@ -7,7 +7,7 @@
       </h1>
       <div class="flex items-center gap-4">
         <span class="text-accent text-lg font-medium">{{ project.year }}</span>
-        <div class="w-16 h-[2px] bg-accent"></div>
+        <div class="w-16 h-[2px] bg-accent" />
       </div>
     </div>
 
@@ -20,7 +20,9 @@
         :class="{ 'opacity-100 slide-up': typedParagraphs[index] }"
         :style="{ transitionDelay: `${index * 200}ms` }"
       >
-        <p class="whitespace-pre-wrap">{{ typedParagraphs[index] }}</p>
+        <p class="whitespace-pre-wrap">
+          {{ typedParagraphs[index] }}
+        </p>
       </div>
     </div>
   </div>
