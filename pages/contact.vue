@@ -10,19 +10,19 @@
     <!-- Grid Layout -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
       <!-- Left Column - Content -->
-      <div class="flex items-center lg:justify-center justify-start w-full p-6 lg:p-12">
+      <div class="flex items-center lg:justify-center justify-start w-full p-4 sm:p-6 lg:p-12">
         <div class="max-w-lg animate-fade-in">
-          <div class="space-y-6 mb-12">
-            <h1 class="lg:text-8xl text-6xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
+          <div class="space-y-4 lg:space-y-6 mb-8 lg:mb-12">
+            <h1 class="lg:text-8xl text-5xl sm:text-6xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
               Contact
             </h1>
-            <h2 class="lg:text-2xl text-lg capitalize mb-6 text-accent font-bold tracking-wider">
+            <h2 class="lg:text-2xl text-xl capitalize mb-4 lg:mb-6 text-accent font-bold tracking-wider">
               <span class="block w-[200px] min-h-[1.5em] relative">
                 <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
                 <span class="invisible">software developer</span>
               </span>
             </h2>
-            <p class="text-white/80 max-w-[500px] py-4 text-lg leading-relaxed animate-slide-up delay-300">
+            <p class="text-white/80 max-w-[500px] py-4 text-base lg:text-lg leading-relaxed animate-slide-up delay-300">
               Have a project or idea in mind? Let's team up to create intuitive, high-performance solutions that drive results.
             </p>
           </div>
@@ -30,22 +30,22 @@
       </div>
 
       <!-- Right Column - Contact Info -->
-      <div class="flex items-center justify-center w-full p-6 lg:p-12">
-        <div class="w-full max-w-2xl space-y-8 animate-scale-in">
+      <div class="flex items-center justify-center w-full p-4 sm:p-6 lg:p-12">
+        <div class="w-full max-w-2xl space-y-6 lg:space-y-8 animate-scale-in">
           <!-- Phone -->
-          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
-            <div class="flex items-center gap-6">
+          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 lg:p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+            <div class="flex items-center gap-4 lg:gap-6">
               <div class="relative">
-                <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
-                  <IconsPhone class="w-6 h-6" />
+                <div class="text-accent p-3 lg:p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <IconsPhone class="w-5 h-5 lg:w-6 lg:h-6" />
                 </div>
                 <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20" />
               </div>
               <div>
-                <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
+                <p class="text-white/60 text-xs lg:text-sm font-medium uppercase tracking-wider mb-1 lg:mb-2">
                   Phone
                 </p>
-                <p class="font-bold text-xl text-white group-hover:text-accent transition-colors duration-300">
+                <p class="font-bold text-lg lg:text-xl text-white group-hover:text-accent transition-colors duration-300">
                   (+91) 917 342 0297
                 </p>
               </div>
@@ -53,19 +53,19 @@
           </div>
 
           <!-- Email -->
-          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
-            <div class="flex items-center gap-6">
+          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 lg:p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+            <div class="flex items-center gap-4 lg:gap-6">
               <div class="relative">
-                <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
-                  <IconsEmail class="w-6 h-6" />
+                <div class="text-accent p-3 lg:p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <IconsEmail class="w-5 h-5 lg:w-6 lg:h-6" />
                 </div>
                 <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20 delay-300" />
               </div>
               <div>
-                <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
+                <p class="text-white/60 text-xs lg:text-sm font-medium uppercase tracking-wider mb-1 lg:mb-2">
                   Email
                 </p>
-                <p class="font-bold text-lg text-white group-hover:text-accent transition-colors duration-300 break-all">
+                <p class="font-bold text-sm lg:text-lg text-white group-hover:text-accent transition-colors duration-300 break-all">
                   ghodasarasandip011@gmail.com
                 </p>
               </div>
@@ -73,19 +73,19 @@
           </div>
 
           <!-- Address -->
-          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
-            <div class="flex items-center gap-6">
+          <div class="group relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 lg:p-8 hover:bg-white/15 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
+            <div class="flex items-center gap-4 lg:gap-6">
               <div class="relative">
-                <div class="text-accent p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
-                  <IconsLocation class="w-6 h-6" />
+                <div class="text-accent p-3 lg:p-4 bg-accent/20 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <IconsLocation class="w-5 h-5 lg:w-6 lg:h-6" />
                 </div>
                 <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping opacity-20 delay-700" />
               </div>
               <div>
-                <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-2">
+                <p class="text-white/60 text-xs lg:text-sm font-medium uppercase tracking-wider mb-1 lg:mb-2">
                   Address
                 </p>
-                <p class="font-bold text-xl text-white group-hover:text-accent transition-colors duration-300">
+                <p class="font-bold text-lg lg:text-xl text-white group-hover:text-accent transition-colors duration-300">
                   Gota, Ahmedabad, Gujarat
                 </p>
               </div>

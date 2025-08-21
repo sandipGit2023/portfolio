@@ -1,22 +1,22 @@
 <template>
-  <div class="min-h-screen flex flex-col items-start justify-start text-white p-6 lg:p-8">
+  <div class="min-h-screen flex flex-col items-start justify-start text-white p-4 sm:p-6 lg:p-8">
     <!-- Project Header -->
-    <div class="w-full max-w-4xl mb-12">
-      <h1 class="text-3xl lg:text-5xl font-bold tracking-wide leading-tight mb-4">
+    <div class="w-full max-w-4xl mb-8 lg:mb-12">
+      <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-wide leading-tight mb-3 lg:mb-4">
         {{ project.title }}
       </h1>
-      <div class="flex items-center gap-4">
-        <span class="text-accent text-lg font-medium">{{ project.year }}</span>
-        <div class="w-16 h-[2px] bg-accent" />
+      <div class="flex items-center gap-3 lg:gap-4">
+        <span class="text-accent text-base lg:text-lg font-medium">{{ project.year }}</span>
+        <div class="w-12 lg:w-16 h-[2px] bg-accent" />
       </div>
     </div>
 
     <!-- Project Description -->
-    <div class="w-full max-w-4xl space-y-8">
+    <div class="w-full max-w-4xl space-y-6 lg:space-y-8">
       <div
         v-for="(para, index) in project.description"
         :key="index"
-        class="text-white/70 text-base lg:text-lg leading-relaxed opacity-0 transition-all duration-700 ease-out"
+        class="text-white/70 text-sm lg:text-lg leading-relaxed opacity-0 transition-all duration-700 ease-out"
         :class="{ 'opacity-100 slide-up': typedParagraphs[index] }"
         :style="{ transitionDelay: `${index * 200}ms` }"
       >

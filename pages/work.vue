@@ -10,14 +10,14 @@
     <!-- Grid Layout -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
       <!-- Left Column - Project Info -->
-      <div class="flex items-center lg:justify-center justify-start w-full p-6 lg:p-12">
+      <div class="flex items-center lg:justify-center justify-start w-full p-4 sm:p-6 lg:p-12">
         <div class="lg:min-w-[400px] min-w-[250px] max-w-full animate-fade-in">
           <ProjectCard :project="projects[currentProject]" />
         </div>
       </div>
 
       <!-- Right Column - Project Details -->
-      <div class="flex items-center justify-center w-full p-6 lg:p-12">
+      <div class="flex items-center justify-center w-full p-4 sm:p-6 lg:p-12">
         <div class="w-full max-w-4xl animate-scale-in">
           <ProjectDetailsCard :project="currentProjectDetail" />
         </div>
@@ -25,18 +25,18 @@
     </div>
 
     <!-- Navigation Button - Bottom Left -->
-    <div class="absolute bottom-8 left-8 z-20">
+    <div class="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 z-20">
       <button
-        class="group relative overflow-hidden border-2 border-white text-white font-bold w-16 h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow"
+        class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow"
         aria-label="Next project"
         @click="nextProject"
       >
-        <IconsRightArrow class="w-6 h-6 group-hover:scale-110 transition-all duration-300" />
+        <IconsRightArrow class="w-5 h-5 lg:w-6 lg:h-6 group-hover:scale-110 transition-all duration-300" />
       </button>
     </div>
 
     <!-- Project Counter -->
-    <div class="absolute bottom-6 right-6 text-white/60 text-sm font-medium bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 animate-fade-in">
+    <div class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 text-white/60 text-xs sm:text-sm font-medium bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-white/20 animate-fade-in">
       {{ currentProject + 1 }} / {{ projects.length }}
     </div>
 

@@ -10,19 +10,19 @@
     <!-- Grid Layout -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
       <!-- Left Column - Content -->
-      <div class="flex items-center lg:justify-center justify-start w-full p-6 lg:p-12">
+      <div class="flex items-center lg:justify-center justify-start w-full p-4 sm:p-6 lg:p-12">
         <div class="max-w-lg animate-fade-in">
-          <div class="space-y-6 mb-12">
-            <h1 class="lg:text-8xl text-6xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
+          <div class="space-y-4 lg:space-y-6 mb-8 lg:mb-12">
+            <h1 class="lg:text-8xl text-5xl sm:text-6xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
               About
             </h1>
-            <h2 class="lg:text-2xl text-lg capitalize mb-6 text-accent font-bold tracking-wider">
+            <h2 class="lg:text-2xl text-xl capitalize mb-4 lg:mb-6 text-accent font-bold tracking-wider">
               <span class="block w-[200px] min-h-[1.5em] relative">
                 <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
                 <span class="invisible">software developer</span>
               </span>
             </h2>
-            <p class="text-white/80 max-w-[500px] py-4 text-lg leading-relaxed animate-slide-up delay-300">
+            <p class="text-white/80 max-w-[500px] py-4 text-base lg:text-lg leading-relaxed animate-slide-up delay-300">
               Passionate Software Engineer crafting high-performance APIs, intuitive admin panels, and AI-powered solutions to drive innovation, efficiency, and scalability.
             </p>
           </div>
@@ -30,27 +30,27 @@
       </div>
 
       <!-- Right Column - Tabs -->
-      <div class="flex items-center justify-center w-full p-6 lg:p-12">
+      <div class="flex items-center justify-center w-full p-4 sm:p-6 lg:p-12">
         <div class="w-full max-w-4xl animate-scale-in">
           <UTabs
             :items="items"
             size="lg"
             variant="pill"
-            class="gap-6 lg:gap-10 w-full"
+            class="gap-4 lg:gap-10 w-full"
             :ui="{
               trigger: 'flex-1 text-sm lg:text-base font-medium',
               label: 'hidden lg:block',
-              list: 'bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-3 shadow-glow',
+              list: 'bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 lg:p-3 shadow-glow',
             }"
           >
             <template #skills="{ }">
-              <div class="mt-8 animate-fade-in">
+              <div class="mt-6 lg:mt-8 animate-fade-in">
                 <SkillCard />
               </div>
             </template>
 
             <template #education="{ }">
-              <div class="mt-8 animate-fade-in">
+              <div class="mt-6 lg:mt-8 animate-fade-in">
                 <ExperienceCard />
               </div>
             </template>
