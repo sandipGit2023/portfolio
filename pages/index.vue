@@ -11,7 +11,7 @@
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
       <!-- Left Column - Content -->
       <div class="flex items-center lg:justify-center justify-start w-full p-4 sm:p-6 lg:p-12">
-        <div class="w-full animate-fade-in">
+        <div class="max-w-lg animate-fade-in">
           <div class="mb-6 lg:mb-8">
             <h2 class="lg:text-2xl text-xl uppercase hidden lg:block mb-4 text-accent font-bold tracking-wider">
               <span class="block w-[200px] min-h-[1.5em] relative">
@@ -31,14 +31,14 @@
           </div>
 
           <h2 class="lg:text-2xl text-xl uppercase block lg:hidden mt-4 lg:mt-6 mb-6 lg:mb-8 text-accent font-bold">
-            <span class="block md:w-[200px] min-h-[1.5em] relative">
+            <span class="block w-[200px] min-h-[1.5em] relative">
               <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
               <span class="invisible">software developer</span>
             </span>
           </h2>
 
-          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6 mt-8 lg:mt-12">
-            <div class="flex md:hidden flex-row gap-3 w-full">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6 lg:mt-20 mt-8 lg:mt-12">
+            <div class="flex md:hidden flex-row gap-3 w-full justify-start">
               <NuxtLink
                 href="/cv/Sandip_Ghodasara_Int_new.pdf"
                 target="_blank"
@@ -103,61 +103,108 @@
         </div>
       </div>
 
-      <!-- Right Column - Image & Stats Only -->
+      <!-- Right Column - Enhanced Profile & Stats -->
       <div class="flex items-center lg:justify-center w-full p-4 sm:p-6 lg:p-12">
         <div class="w-full max-w-2xl animate-fade-in delay-500">
-          <!-- Profile Image -->
-          <div class="flex items-center justify-center mb-6 lg:mb-8">
-            <div class="relative">
-              <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-gradient-to-br from-accent to-accent-dark p-1 animate-pulse">
-                <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover">
-              </div>
+          <!-- Dopamine-Releasing Hero Section -->
+          <div class="relative">
+            <!-- Animated Background Particles -->
+            <div class="absolute inset-0 overflow-hidden">
+              <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-accent rounded-full animate-ping opacity-60"></div>
+              <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-accent/80 rounded-full animate-bounce delay-1000"></div>
+              <div class="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-accent/60 rounded-full animate-pulse delay-500"></div>
+              <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-accent/40 rounded-full animate-bounce delay-2000"></div>
             </div>
-          </div>
 
-          <!-- Stats Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4">
-            <!-- Experience Card -->
-            <div class="group relative">
-              <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4 lg:p-6 hover:bg-accent/20 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
-                <div class="text-center">
-                  <div class="text-3xl lg:text-4xl font-black text-accent mb-2 lg:mb-3 group-hover:scale-110 transition-transform duration-500">
-                    4+
+            <!-- Main Hero Card -->
+            <div class="relative group">
+              <!-- 3D Floating Card Effect -->
+              <div class="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 rounded-3xl p-8 lg:p-12 transform transition-all duration-700 hover:scale-105 hover:rotate-1 hover:shadow-2xl hover:shadow-accent/20">
+
+                <!-- Profile Section -->
+                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                  <!-- Animated Profile Image -->
+                  <div class="relative">
+                    <div class="relative w-32 h-32 lg:w-40 lg:h-40">
+                      <!-- Glowing Ring Effect -->
+                      <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-dark to-accent animate-spin-slow opacity-30"></div>
+                      <div class="absolute inset-2 rounded-full bg-gradient-to-br from-accent/20 to-transparent backdrop-blur-sm"></div>
+
+                      <!-- Main Image -->
+                      <div class="relative w-full h-full rounded-full bg-gradient-to-br from-accent to-accent-dark p-1 animate-pulse">
+                        <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover">
+                      </div>
+
+                      <!-- Floating Tech Icons -->
+                      <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center animate-float">
+                        <Icon name="mdi:laravel" class="w-4 h-4 text-accent" />
+                      </div>
+                      <div class="absolute -bottom-2 -left-2 w-8 h-8 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center animate-float delay-1000">
+                        <Icon name="carbon:logo-vue" class="w-4 h-4 text-accent" />
+                      </div>
+                      <div class="absolute top-1/2 -right-4 w-6 h-6 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center animate-float delay-500">
+                        <Icon name="cib:react" class="w-3 h-3 text-accent" />
+                      </div>
+                    </div>
                   </div>
-                  <div class="text-xs lg:text-sm font-bold text-white/80 uppercase tracking-wider">
-                    Years of Experience
+
+                  <!-- Content Section -->
+                  <div class="flex-1 text-center lg:text-left">
+                    <div class="space-y-6">
+                      <!-- Animated Progress Bars -->
+                      <div class="space-y-4">
+                        <div class="group">
+                          <div class="flex justify-between items-center mb-2">
+                            <span class="text-white/80 text-sm font-medium">Experience</span>
+                            <span class="text-accent text-sm font-bold group-hover:scale-110 transition-transform">4+ Years</span>
+                          </div>
+                          <div class="relative w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-accent to-accent-dark rounded-full transform transition-all duration-1000 group-hover:scale-x-110" style="width: 85%"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                          </div>
+                        </div>
+
+                        <div class="group">
+                          <div class="flex justify-between items-center mb-2">
+                            <span class="text-white/80 text-sm font-medium">Projects</span>
+                            <span class="text-accent text-sm font-bold group-hover:scale-110 transition-transform">6+ Completed</span>
+                          </div>
+                          <div class="relative w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-accent to-accent-dark rounded-full transform transition-all duration-1000 group-hover:scale-x-110" style="width: 90%"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                          </div>
+                        </div>
+
+                        <div class="group">
+                          <div class="flex justify-between items-center mb-2">
+                            <span class="text-white/80 text-sm font-medium">Skills</span>
+                            <span class="text-accent text-sm font-bold group-hover:scale-110 transition-transform">5+ Technologies</span>
+                          </div>
+                          <div class="relative w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-accent to-accent-dark rounded-full transform transition-all duration-1000 group-hover:scale-x-110" style="width: 95%"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="w-8 lg:w-12 h-1 bg-accent mx-auto mt-2 lg:mt-3 group-hover:w-12 lg:group-hover:w-16 transition-all duration-500" />
                 </div>
-              </div>
-            </div>
 
-            <!-- Projects Card -->
-            <div class="group relative">
-              <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4 lg:p-6 hover:bg-accent/20 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
-                <div class="text-center">
-                  <div class="text-3xl lg:text-4xl font-black text-accent mb-2 lg:mb-3 group-hover:scale-110 transition-transform duration-500">
-                    6+
-                  </div>
-                  <div class="text-xs lg:text-sm font-bold text-white/80 uppercase tracking-wider">
-                    Projects Completed
-                  </div>
-                  <div class="w-8 lg:w-12 h-1 bg-accent mx-auto mt-2 lg:mt-3 group-hover:w-12 lg:group-hover:w-16 transition-all duration-500" />
-                </div>
-              </div>
-            </div>
-
-            <!-- Skills Card -->
-            <div class="group relative">
-              <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4 lg:p-6 hover:bg-accent/20 hover:border-accent/30 hover:shadow-glow transition-all duration-500 transform hover:scale-105">
-                <div class="text-center">
-                  <div class="text-3xl lg:text-4xl font-black text-accent mb-2 lg:mb-3 group-hover:scale-110 transition-transform duration-500">
-                    5+
-                  </div>
-                  <div class="text-xs lg:text-sm font-bold text-white/80 uppercase tracking-wider">
-                    Tech<br>Expertise
-                  </div>
-                  <div class="w-8 lg:w-12 h-1 bg-accent mx-auto mt-2 lg:mt-3 group-hover:w-12 lg:group-hover:w-16 transition-all duration-500" />
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 lg:mt-12">
+                  <NuxtLink
+                    to="/work"
+                    class="group relative overflow-hidden bg-gradient-to-r from-accent to-accent-dark text-black font-bold py-3 px-8 rounded-full transform transition-all duration-500 hover:scale-110 hover:shadow-xl hover:shadow-accent/30"
+                  >
+                    <span class="relative z-10">View My Work</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-accent-dark to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </NuxtLink>
+                  <NuxtLink
+                    to="/contact"
+                    class="group relative overflow-hidden border-2 border-accent text-accent font-bold py-3 px-8 rounded-full hover:bg-accent hover:text-black transform transition-all duration-500 hover:scale-110 hover:shadow-xl hover:shadow-accent/30"
+                  >
+                    <span class="relative z-10">Get In Touch</span>
+                  </NuxtLink>
                 </div>
               </div>
             </div>
