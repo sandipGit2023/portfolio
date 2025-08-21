@@ -7,6 +7,79 @@
       <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-accent/8 rounded-full blur-2xl animate-pulse delay-500" />
     </div>
 
+    <!-- Floating Tech Bubbles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                  <!-- Tech Bubbles - Right Side -->
+      <div class="floating-bubble" style="--delay: 0s; --duration: 8s; --x: 75%; --y: 15%; --size: 70px;">
+        <div class="bubble-content">
+          <Icon name="mdi:laravel" class="w-6 h-6 text-accent" />
+        </div>
+      </div>
+      <div class="floating-bubble" style="--delay: 2s; --duration: 10s; --x: 85%; --y: 25%; --size: 50px;">
+        <div class="bubble-content">
+          <Icon name="carbon:logo-vue" class="w-5 h-5 text-accent" />
+        </div>
+      </div>
+      <div class="floating-bubble" style="--delay: 4s; --duration: 12s; --x: 70%; --y: 45%; --size: 60px;">
+        <div class="bubble-content">
+          <Icon name="cib:react" class="w-5 h-5 text-accent" />
+        </div>
+      </div>
+      <div class="floating-bubble" style="--delay: 1s; --duration: 9s; --x: 90%; --y: 55%; --size: 45px;">
+        <div class="bubble-content">
+          <Icon name="logos:nodejs-icon" class="w-4 h-4 text-accent" />
+        </div>
+      </div>
+      <div class="floating-bubble" style="--delay: 3s; --duration: 11s; --x: 80%; --y: 70%; --size: 55px;">
+        <div class="bubble-content">
+          <Icon name="logos:nuxt-icon" class="w-5 h-5 text-accent" />
+        </div>
+      </div>
+
+      <!-- Tech Bubbles - Left Side of Image -->
+      <div class="floating-bubble" style="--delay: 0.5s; --duration: 8.5s; --x: 60%; --y: 42%; --size: 55px;">
+        <div class="bubble-content">
+          <Icon name="mdi:language-typescript" class="w-5 h-5 text-accent" />
+        </div>
+      </div>
+      <div class="floating-bubble" style="--delay: 2.5s; --duration: 10.5s; --x: 61%; --y: 55%; --size: 55px;">
+        <div class="bubble-content">
+          <Icon name="mdi:language-javascript" class="w-6 h-6 text-accent" />
+        </div>
+      </div>
+      <div class="floating-bubble" style="--delay: 1.5s; --duration: 9.5s; --x: 60%; --y: 70%; --size: 65px;">
+        <div class="bubble-content">
+          <Icon name="mdi:git" class="w-5 h-5 text-accent" />
+        </div>
+      </div>
+
+      <!-- Stats Bubbles -->
+      <div class="floating-bubble" style="--delay: 0.5s; --duration: 9.5s; --x: 68%; --y: 10%; --size: 100px;">
+        <div class="bubble-content stats-bubble">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-black">4+</div>
+            <div class="text-sm text-black/70">Years</div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-bubble" style="--delay: 2.5s; --duration: 11.5s; --x: 92%; --y: 30%; --size: 95px;">
+        <div class="bubble-content stats-bubble">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-black">6+</div>
+            <div class="text-sm text-black/70">Projects</div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-bubble" style="--delay: 4.5s; --duration: 13.5s; --x: 68%; --y: 80%; --size: 90px;">
+        <div class="bubble-content stats-bubble">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-black">5+</div>
+            <div class="text-sm text-black/70">Skills</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Grid Layout -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
       <!-- Left Column - Content -->
@@ -103,120 +176,27 @@
         </div>
       </div>
 
-      <!-- Right Column - Enhanced Profile & Stats -->
+      <!-- Right Column - Creative Image Design with Interactive Stats -->
       <div class="flex items-center lg:justify-center w-full p-4 sm:p-6 lg:p-12">
         <div class="w-full max-w-2xl animate-fade-in delay-500">
-          <!-- Dopamine-Releasing Hero Section -->
-          <div class="relative">
-            <!-- Animated Background Particles -->
-            <div class="absolute inset-0 overflow-hidden">
-              <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-accent rounded-full animate-ping opacity-60"></div>
-              <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-accent/80 rounded-full animate-bounce delay-1000"></div>
-              <div class="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-accent/60 rounded-full animate-pulse delay-500"></div>
-              <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-accent/40 rounded-full animate-bounce delay-2000"></div>
-            </div>
+          <!-- Creative Image Container -->
+          <div class="relative group">
+            <!-- Main Image with Creative Effects -->
+            <div class="relative w-80 h-80 lg:w-96 lg:h-96 mx-auto">
+              <!-- Glowing Ring Effect -->
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-dark to-accent animate-spin-slow opacity-30"></div>
+              <div class="absolute inset-4 rounded-full bg-gradient-to-br from-accent/20 to-transparent backdrop-blur-sm"></div>
 
-            <!-- Main Hero Card -->
-            <div class="relative group">
-              <!-- 3D Floating Card Effect -->
-              <div class="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 rounded-3xl p-8 lg:p-12 transform transition-all duration-700 hover:scale-105 hover:rotate-1 hover:shadow-2xl hover:shadow-accent/20">
-
-                <!-- Profile Section -->
-                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                  <!-- Animated Profile Image -->
-                  <div class="relative">
-                    <div class="relative w-32 h-32 lg:w-40 lg:h-40">
-                      <!-- Glowing Ring Effect -->
-                      <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-dark to-accent animate-spin-slow opacity-30"></div>
-                      <div class="absolute inset-2 rounded-full bg-gradient-to-br from-accent/20 to-transparent backdrop-blur-sm"></div>
-
-                      <!-- Main Image -->
-                      <div class="relative w-full h-full rounded-full bg-gradient-to-br from-accent to-accent-dark p-1 animate-pulse">
-                        <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover">
-                      </div>
-
-                      <!-- Floating Tech Icons -->
-                      <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center animate-float">
-                        <Icon name="mdi:laravel" class="w-4 h-4 text-accent" />
-                      </div>
-                      <div class="absolute -bottom-2 -left-2 w-8 h-8 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center animate-float delay-1000">
-                        <Icon name="carbon:logo-vue" class="w-4 h-4 text-accent" />
-                      </div>
-                      <div class="absolute top-1/2 -right-4 w-6 h-6 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center animate-float delay-500">
-                        <Icon name="cib:react" class="w-3 h-3 text-accent" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Content Section -->
-                  <div class="flex-1 text-center lg:text-left">
-                    <div class="space-y-6">
-                      <!-- Animated Progress Bars -->
-                      <div class="space-y-4">
-                        <div class="group">
-                          <div class="flex justify-between items-center mb-2">
-                            <span class="text-white/80 text-sm font-medium">Experience</span>
-                            <span class="text-accent text-sm font-bold group-hover:scale-110 transition-transform">4+ Years</span>
-                          </div>
-                          <div class="relative w-full h-3 bg-white/10 rounded-full overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-r from-accent to-accent-dark rounded-full transform transition-all duration-1000 group-hover:scale-x-110" style="width: 85%"></div>
-                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-                          </div>
-                        </div>
-
-                        <div class="group">
-                          <div class="flex justify-between items-center mb-2">
-                            <span class="text-white/80 text-sm font-medium">Projects</span>
-                            <span class="text-accent text-sm font-bold group-hover:scale-110 transition-transform">6+ Completed</span>
-                          </div>
-                          <div class="relative w-full h-3 bg-white/10 rounded-full overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-r from-accent to-accent-dark rounded-full transform transition-all duration-1000 group-hover:scale-x-110" style="width: 90%"></div>
-                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-                          </div>
-                        </div>
-
-                        <div class="group">
-                          <div class="flex justify-between items-center mb-2">
-                            <span class="text-white/80 text-sm font-medium">Skills</span>
-                            <span class="text-accent text-sm font-bold group-hover:scale-110 transition-transform">5+ Technologies</span>
-                          </div>
-                          <div class="relative w-full h-3 bg-white/10 rounded-full overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-r from-accent to-accent-dark rounded-full transform transition-all duration-1000 group-hover:scale-x-110" style="width: 95%"></div>
-                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 lg:mt-12">
-                  <NuxtLink
-                    to="/work"
-                    class="group relative overflow-hidden bg-gradient-to-r from-accent to-accent-dark text-black font-bold py-3 px-8 rounded-full transform transition-all duration-500 hover:scale-110 hover:shadow-xl hover:shadow-accent/30"
-                  >
-                    <span class="relative z-10">View My Work</span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-accent-dark to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </NuxtLink>
-                  <NuxtLink
-                    to="/contact"
-                    class="group relative overflow-hidden border-2 border-accent text-accent font-bold py-3 px-8 rounded-full hover:bg-accent hover:text-black transform transition-all duration-500 hover:scale-110 hover:shadow-xl hover:shadow-accent/30"
-                  >
-                    <span class="relative z-10">Get In Touch</span>
-                  </NuxtLink>
-                </div>
+              <!-- Main Image -->
+              <div class="relative w-full h-full rounded-full bg-gradient-to-br from-accent to-accent-dark p-2">
+                <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover">
               </div>
             </div>
-          </div>
+
+                       </div>
         </div>
       </div>
     </div>
-
-    <!-- Floating Elements -->
-    <!-- <div class="absolute top-10 right-10 w-4 h-4 bg-accent rounded-full animate-bounce" />
-    <div class="absolute bottom-20 left-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000" />
-    <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-accent/40 rounded-full animate-bounce delay-500" /> -->
   </div>
 </template>
 
@@ -226,6 +206,8 @@ const currentText = ref('')
 let currentPhrase = 0
 let currentChar = 0
 let isDeleting = false
+
+
 
 const typeEffect = () => {
   const phrase = phrases[currentPhrase]
@@ -312,5 +294,72 @@ span.invisible {
 
 .delay-1000 {
   animation-delay: 1000ms;
+}
+
+/* Floating Tech Bubbles */
+.floating-bubble {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  animation: float var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+.bubble-content {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 153, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 153, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bubble-content:hover {
+  transform: scale(1.2);
+  background: rgba(0, 255, 153, 0.2);
+  border-color: rgba(0, 255, 153, 0.6);
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+}
+
+.stats-bubble {
+  background: #00ff99;
+  border: 1px solid #00ff99;
+}
+
+.stats-bubble:hover {
+  background: #00e187;
+  border-color: #00e187;
+  box-shadow: 0 0 25px rgba(0, 255, 153, 0.5);
+}
+
+
+
+/* Floating animation for bubbles and tech icons */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  66% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-bubble {
+    display: none;
+  }
+
+
 }
 </style>
