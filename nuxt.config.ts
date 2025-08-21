@@ -9,8 +9,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
   ],
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css', '@fontsource/space-mono'],
-  compatibilityDate: '2024-11-01',
   app: {
     head: {
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover',
@@ -22,6 +20,8 @@ export default defineNuxtConfig({
       ],
     },
   },
+  css: ['~/assets/css/main.css', '@fontsource/space-mono'],
+  compatibilityDate: '2024-11-01',
   vite: {
     plugins: [
       tailwindcss(),

@@ -43,7 +43,7 @@
               target="_blank"
               rel="noopener noreferrer"
               download="Sandip_Ghodasara_CV.pdf"
-              class="group relative overflow-hidden border-2 border-white text-white font-bold py-3 lg:py-4 px-6 lg:px-8 rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer text-sm uppercase tracking-wider hover:shadow-glow w-full sm:w-auto text-center"
+              class="group relative overflow-hidden border-2 border-white text-white font-bold py-3 lg:py-4 px-6 lg:px-8 rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer text-sm uppercase tracking-wider hover:shadow-glow w-full sm:w-auto text-center flex items-center justify-center mobile-button-primary"
             >
               <span class="relative z-10">Download CV</span>
               <Icon name="prime:download" class="relative z-10 w-5 h-5 ml-2" />
@@ -55,14 +55,14 @@
               <NuxtLink
                 to="https://github.com/sandipGit2023"
                 target="_blank"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow"
+                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0 mobile-button-secondary social-button"
               >
                 <Icon name="prime:github" class="w-6 h-6 lg:w-8 lg:h-8 group-hover:scale-110 transition-all duration-300" />
               </NuxtLink>
               <NuxtLink
                 to="https://linkedin.com/in/ghodasara-sandip"
                 target="_blank"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow"
+                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0 mobile-button-secondary social-button"
               >
                 <Icon
                   name="basil:linkedin-solid"

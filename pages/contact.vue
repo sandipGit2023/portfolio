@@ -22,7 +22,7 @@
                 <span class="invisible">software developer</span>
               </span>
             </h2>
-            <p class="text-white/80 max-w-[500px] py-4 text-base lg:text-lg leading-relaxed animate-slide-up delay-300">
+            <p class="text-white/80 max-w-[500px] py-4 text-base lg:text-lg leading-relaxed animate-slide-up delay-300 mt-4 lg:mt-6">
               Have a project or idea in mind? Let's team up to create intuitive, high-performance solutions that drive results.
             </p>
           </div>
@@ -96,9 +96,9 @@
     </div>
 
     <!-- Floating Elements -->
-    <div class="absolute top-10 left-10 w-4 h-4 bg-accent rounded-full animate-bounce" />
-    <div class="absolute bottom-20 right-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000" />
-    <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-accent/40 rounded-full animate-bounce delay-500" />
+    <div class="absolute top-10 right-10 w-4 h-4 bg-accent rounded-full animate-bounce" />
+    <div class="absolute bottom-20 left-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000" />
+    <div class="absolute top-1/3 left-1/4 w-2 h-2 bg-accent/40 rounded-full animate-bounce delay-500" />
   </div>
 </template>
 
