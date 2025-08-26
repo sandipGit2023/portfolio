@@ -32,8 +32,8 @@
       </div>
     </header>
 
-    <!-- Navigation Sidebar (Desktop Only) -->
-    <nav class="hidden lg:flex relative z-10 lg:w-24 w-full lg:h-screen h-auto lg:border-r border-b border-white/20 bg-white/10 backdrop-blur-md">
+    <!-- Navigation Sidebar -->
+    <nav class="relative z-10 lg:w-24 w-full lg:h-screen h-auto lg:border-r border-b border-white/20 bg-white/10 backdrop-blur-md">
       <div class="lg:flex lg:flex-col lg:space-y-8 lg:justify-center lg:items-center lg:p-6 flex flex-row justify-around items-center p-4 lg:p-6">
         <nuxt-link
           v-for="(link, index) in links"
