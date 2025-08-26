@@ -40,6 +40,61 @@
       {{ currentProject + 1 }} / {{ projects.length }}
     </div>
 
+    <!-- Scroll Up Indicator -->
+    <div
+      ref="scrollUpIndicator"
+      class="fixed top-8 left-1/2 transform -translate-x-1/2 z-20 opacity-0 transition-all duration-500 ease-out"
+      :class="{ 'opacity-100': showScrollUpIndicator }"
+    >
+      <div class="flex flex-col items-center group cursor-pointer" @click="navigateToDirection('up')">
+        <!-- Glowing SCROLL text -->
+        <div class="relative">
+          <div class="text-lg font-bold text-accent tracking-widest glow-text">
+            SCROLL
+          </div>
+          <!-- Glow effect -->
+          <div class="absolute inset-0 text-lg font-bold text-accent/30 tracking-widest blur-sm animate-pulse">
+            SCROLL
+          </div>
+          <!-- Animated arrow -->
+          <div class="mt-2 flex justify-center">
+            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform -rotate-135 animate-bounce"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <div
+      ref="scrollDownIndicator"
+      class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-20 opacity-0 transition-all duration-500 ease-out"
+      :class="{ 'opacity-100': showScrollDownIndicator }"
+    >
+      <div class="flex flex-col items-center group cursor-pointer" @click="navigateToDirection('down')">
+        <!-- Glowing SCROLL text -->
+        <div class="relative">
+          <div class="text-lg font-bold text-accent tracking-widest glow-text">
+            SCROLL
+          </div>
+          <!-- Glow effect -->
+          <div class="absolute inset-0 text-lg font-bold text-accent/30 tracking-widest blur-sm animate-pulse">
+            SCROLL
+          </div>
+          <!-- Animated arrow -->
+          <div class="mt-2 flex justify-center">
+            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform rotate-45 animate-bounce"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cursor Following Accent Circle -->
+    <div
+      ref="cursorCircle"
+      class="fixed w-12 h-12 bg-accent/60 rounded-full pointer-events-none z-50 transition-all duration-200 ease-out cursor-circle cursor-circle-glow border-2 border-accent/40"
+      style="transform: translate(-50%, -50%)"
+    ></div>
+
     <!-- Floating Elements -->
     <div class="absolute top-10 right-10 w-4 h-4 bg-accent rounded-full animate-bounce" />
     <div class="absolute bottom-20 left-10 w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-1000" />
@@ -129,6 +184,68 @@ const currentProjectDetail = computed(() => {
 const nextProject = () => {
   currentProject.value = (currentProject.value + 1) % projects.value.length
 }
+
+// Use scroll navigation composable
+const { handleScrollNavigation, navigateToDirection } = useScrollNavigation()
+
+// Cursor following circle
+const cursorCircle = ref(null)
+const scrollUpIndicator = ref(null)
+const scrollDownIndicator = ref(null)
+const showScrollUpIndicator = ref(false)
+const showScrollDownIndicator = ref(false)
+
+// Handle cursor movement
+const handleMouseMove = (event) => {
+  if (cursorCircle.value) {
+    cursorCircle.value.style.left = event.clientX + 'px'
+    cursorCircle.value.style.top = event.clientY + 'px'
+  }
+
+  // Show scroll indicators when cursor is at top or bottom of page
+  const windowHeight = window.innerHeight
+  const mouseY = event.clientY
+
+  if (mouseY < 100) {
+    showScrollUpIndicator.value = true
+  } else {
+    showScrollUpIndicator.value = false
+  }
+
+  if (mouseY > windowHeight - 100) {
+    showScrollDownIndicator.value = true
+  } else {
+    showScrollDownIndicator.value = false
+  }
+}
+
+onMounted(() => {
+  // Setup infinite scroll navigation for both directions
+  const { setupListeners: setupDownListeners, cleanupListeners: cleanupDownListeners } = handleScrollNavigation({
+    direction: 'down',
+    threshold: 100,
+    delay: 500
+  })
+
+  const { setupListeners: setupUpListeners, cleanupListeners: cleanupUpListeners } = handleScrollNavigation({
+    direction: 'up',
+    threshold: 50,
+    delay: 500
+  })
+
+  setupDownListeners()
+  setupUpListeners()
+
+  // Setup cursor following
+  document.addEventListener('mousemove', handleMouseMove)
+
+  // Store cleanup function for unmount
+  onUnmounted(() => {
+    cleanupDownListeners()
+    cleanupUpListeners()
+    document.removeEventListener('mousemove', handleMouseMove)
+  })
+})
 </script>
 
 <style scoped>

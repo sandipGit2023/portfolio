@@ -197,6 +197,37 @@
         </div>
       </div>
     </div>
+
+    <!-- Scroll Indicator -->
+    <div
+      ref="scrollIndicator"
+      class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-20 opacity-0 transition-all duration-500 ease-out"
+      :class="{ 'opacity-100': showScrollIndicator }"
+    >
+      <div class="flex flex-col items-center group cursor-pointer" @click="navigateToDirection('down')">
+        <!-- Glowing SCROLL text -->
+        <div class="relative">
+          <div class="text-lg font-bold text-accent tracking-widest glow-text">
+            SCROLL
+          </div>
+          <!-- Glow effect -->
+          <div class="absolute inset-0 text-lg font-bold text-accent/30 tracking-widest blur-sm animate-pulse">
+            SCROLL
+          </div>
+          <!-- Animated arrow -->
+          <div class="mt-2 flex justify-center">
+            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform rotate-45 animate-bounce"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cursor Following Accent Circle -->
+    <div
+      ref="cursorCircle"
+      class="fixed w-12 h-12 bg-accent/60 rounded-full pointer-events-none z-50 transition-all duration-200 ease-out cursor-circle cursor-circle-glow border-2 border-accent/40"
+      style="transform: translate(-50%, -50%)"
+    ></div>
   </div>
 </template>
 
@@ -206,8 +237,6 @@ const currentText = ref('')
 let currentPhrase = 0
 let currentChar = 0
 let isDeleting = false
-
-
 
 const typeEffect = () => {
   const phrase = phrases[currentPhrase]
@@ -228,7 +257,53 @@ const typeEffect = () => {
   setTimeout(typeEffect, isDeleting ? 100 : 150)
 }
 
-onMounted(() => typeEffect())
+// Use scroll navigation composable
+const { handleScrollNavigation, navigateToDirection } = useScrollNavigation()
+
+// Cursor following circle
+const cursorCircle = ref(null)
+const scrollIndicator = ref(null)
+const showScrollIndicator = ref(false)
+
+// Handle cursor movement
+const handleMouseMove = (event) => {
+  if (cursorCircle.value) {
+    cursorCircle.value.style.left = event.clientX + 'px'
+    cursorCircle.value.style.top = event.clientY + 'px'
+  }
+
+  // Show scroll indicator when cursor is at bottom of page
+  const windowHeight = window.innerHeight
+  const mouseY = event.clientY
+
+  if (mouseY > windowHeight - 100) {
+    showScrollIndicator.value = true
+  } else {
+    showScrollIndicator.value = false
+  }
+}
+
+onMounted(() => {
+  typeEffect()
+
+  // Setup infinite scroll navigation
+  const { setupListeners, cleanupListeners } = handleScrollNavigation({
+    direction: 'down',
+    threshold: 100,
+    delay: 500
+  })
+
+  setupListeners()
+
+  // Setup cursor following
+  document.addEventListener('mousemove', handleMouseMove)
+
+  // Store cleanup function for unmount
+  onUnmounted(() => {
+    cleanupListeners()
+    document.removeEventListener('mousemove', handleMouseMove)
+  })
+})
 </script>
 
 <style scoped>

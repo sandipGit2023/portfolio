@@ -390,6 +390,154 @@ html {
     transform: translateY(-8px);
 }
 
+/* Scroll indicator animations */
+.scroll-indicator {
+    animation: scrollIndicator 2s ease-in-out infinite;
+}
+
+@keyframes scrollIndicator {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
+.scroll-indicator-up {
+    animation: scrollIndicatorUp 2s ease-in-out infinite;
+}
+
+@keyframes scrollIndicatorUp {
+    0%, 100% {
+        transform: translateY(0) rotate(180deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-10px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* Enhanced ping animation for scroll dots */
+.scroll-dot-ping {
+    animation: scrollDotPing 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes scrollDotPing {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Cursor following circle animations */
+.cursor-circle {
+    animation: cursorPulse 2s ease-in-out infinite;
+}
+
+@keyframes cursorPulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Enhanced cursor circle with glow effect */
+.cursor-circle-glow {
+    box-shadow:
+        0 0 20px rgba(0, 255, 153, 0.6),
+        0 0 40px rgba(0, 255, 153, 0.4),
+        0 0 60px rgba(0, 255, 153, 0.2),
+        inset 0 0 20px rgba(0, 255, 153, 0.3);
+    backdrop-filter: blur(5px);
+    filter: drop-shadow(0 0 10px rgba(0, 255, 153, 0.5));
+}
+
+/* Cursor circle hover effect */
+.cursor-circle-hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Additional cursor circle enhancements */
+.cursor-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 153, 0.4) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: cursorRipple 3s ease-in-out infinite;
+}
+
+@keyframes cursorRipple {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* Glowing text effect for scroll indicators */
+.glow-text {
+    text-shadow:
+        0 0 10px var(--tw-color-accent),
+        0 0 20px var(--tw-color-accent),
+        0 0 30px var(--tw-color-accent),
+        0 0 40px var(--tw-color-accent);
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow:
+            0 0 10px var(--tw-color-accent),
+            0 0 20px var(--tw-color-accent),
+            0 0 30px var(--tw-color-accent);
+    }
+    to {
+        text-shadow:
+            0 0 20px var(--tw-color-accent),
+            0 0 30px var(--tw-color-accent),
+            0 0 40px var(--tw-color-accent),
+            0 0 50px var(--tw-color-accent);
+    }
+}
+
+/* Enhanced scroll indicator animations */
+.scroll-indicator-enter {
+    animation: scrollIndicatorEnter 0.5s ease-out;
+}
+
+@keyframes scrollIndicatorEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Glass morphism enhancements */
 .glass-card {
     background: rgba(255, 255, 255, 0.1);
