@@ -25,8 +25,14 @@
             class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-accent rounded-full animate-pulse shadow-glow"
           />
 
+          <!-- Initial (always visible) -->
           <span class="text-base font-black tracking-widest relative z-10 block">
-            {{ link.label }}
+            {{ link.initial }}
+          </span>
+
+          <!-- Full name (visible on hover/active) -->
+          <span class="absolute top-0 left-1/2 transform -translate-x-1/2 text-base font-black tracking-widest opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 whitespace-nowrap bg-primary/90 backdrop-blur-sm px-2 py-1 rounded text-accent">
+            {{ link.fullName }}
           </span>
         </nuxt-link>
       </div>
@@ -34,7 +40,7 @@
 
     <!-- Navigation Sidebar -->
     <nav class="relative z-10 lg:w-24 w-full lg:h-screen h-auto lg:border-r border-b border-white/20 bg-white/10 backdrop-blur-md">
-      <div class="lg:flex lg:flex-col lg:space-y-8 lg:justify-center lg:items-center lg:p-6 flex flex-row justify-around items-center p-4 lg:p-6">
+      <div class="lg:flex lg:flex-col lg:space-y-8 lg:justify-center lg:items-center lg:p-6 flex flex-row justify-around items-center">
         <nuxt-link
           v-for="(link, index) in links"
           :key="index"
@@ -51,15 +57,21 @@
             class="absolute lg:-bottom-2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:w-8 lg:h-0.5 w-full h-1 bg-accent rounded-full animate-pulse shadow-glow bottom-0 left-0"
           />
 
+          <!-- Initial (always visible) -->
           <span class="text-base lg:text-base font-black tracking-widest relative z-10 block lg:block">
-            {{ link.label }}
+            {{ link.initial }}
+          </span>
+
+          <!-- Full name (visible on hover/active) -->
+          <span class="absolute lg:top-0 lg:left-full lg:ml-2 top-0 left-1/2 transform lg:transform-none -translate-x-1/2 text-base font-black tracking-widest opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 whitespace-nowrap bg-primary/90 backdrop-blur-sm px-2 py-1 rounded text-accent z-50">
+            {{ link.fullName }}
           </span>
         </nuxt-link>
       </div>
     </nav>
 
     <!-- Main Content Area -->
-    <main class="relative z-10 flex-grow w-full lg:h-screen overflow-auto lg:pt-0 pt-16">
+    <main class="relative z-10 flex-grow w-full lg:h-screen overflow-auto lg:pt-0">
       <div class="h-full">
         <slot />
       </div>
@@ -69,10 +81,10 @@
 
 <script setup>
 const links = [
-  { to: '/', label: '01' },
-  { to: '/work', label: '02' },
-  { to: '/about', label: '03' },
-  { to: '/contact', label: '04' },
+  { to: '/', initial: 'H', fullName: 'Home' },
+  { to: '/work', initial: 'W', fullName: 'Work' },
+  { to: '/about', initial: 'A', fullName: 'About' },
+  { to: '/contact', initial: 'C', fullName: 'Contact' },
 ]
 </script>
 

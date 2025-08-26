@@ -10,7 +10,7 @@
     <!-- Grid Layout -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
       <!-- Left Column - Project Info -->
-      <div class="flex items-center lg:justify-center justify-start w-full p-4 sm:p-6 lg:p-12">
+      <div class="flex items-center lg:justify-center justify-start w-full p-6 sm:p-6 lg:p-12">
         <div class="lg:min-w-[400px] min-w-[250px] max-w-full animate-fade-in">
           <ProjectCard :project="projects[currentProject]" />
         </div>

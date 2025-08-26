@@ -83,7 +83,7 @@
     <!-- Grid Layout -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
       <!-- Left Column - Content -->
-      <div class="flex items-center lg:justify-center justify-start w-full p-4 sm:p-6 lg:p-12">
+      <div class="flex items-center lg:justify-center justify-start w-full p-6 sm:p-6 lg:p-12">
         <div class="max-w-lg animate-fade-in">
           <div class="mb-6 lg:mb-8">
             <h2 class="lg:text-2xl text-xl uppercase hidden lg:block mb-4 text-accent font-bold tracking-wider">
