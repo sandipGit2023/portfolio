@@ -80,11 +80,11 @@
       </div>
     </div>
 
-    <!-- Grid Layout -->
-    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen">
-      <!-- Left Column - Content -->
-      <div class="flex items-center lg:justify-center justify-start w-full p-6 sm:p-6 lg:p-12">
-        <div class="max-w-lg animate-fade-in">
+        <!-- Grid Layout -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white h-screen lg:min-h-screen pt-16 lg:pt-0">
+      <!-- Left Column - Content (Full width on mobile) -->
+      <div class="col-span-1 lg:col-span-1 flex items-center lg:justify-center justify-start w-full p-6 sm:p-6 lg:p-12">
+        <div class="w-full lg:max-w-lg animate-fade-in">
           <div class="mb-6 lg:mb-8">
             <h2 class="lg:text-2xl text-xl uppercase hidden lg:block mb-4 text-accent font-bold tracking-wider">
               <span class="block w-[200px] min-h-[1.5em] relative">
@@ -95,10 +95,10 @@
           </div>
 
           <div class="space-y-3 lg:space-y-4 mb-8 lg:mb-12">
-            <h1 class="lg:text-8xl text-5xl sm:text-6xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
+            <h1 class="lg:text-8xl text-4xl sm:text-5xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
               Hello, I'm
             </h1>
-            <h1 class="lg:text-8xl text-5xl sm:text-6xl capitalize leading-tight font-black text-accent animate-slide-up delay-200">
+            <h1 class="lg:text-8xl text-4xl sm:text-5xl capitalize leading-tight font-black text-accent animate-slide-up delay-200">
               Sandip
             </h1>
           </div>
@@ -177,12 +177,12 @@
       </div>
 
       <!-- Right Column - Creative Image Design with Interactive Stats -->
-      <div class="flex items-center lg:justify-center w-full p-4 sm:p-6 lg:p-12">
+      <div class="col-span-1 lg:col-span-1 flex items-center lg:justify-center w-full p-2 sm:p-6 lg:p-12">
         <div class="w-full max-w-2xl animate-fade-in delay-500">
           <!-- Creative Image Container -->
           <div class="relative group">
             <!-- Main Image with Creative Effects -->
-            <div class="relative w-80 h-80 lg:w-96 lg:h-96 mx-auto">
+            <div class="relative w-56 h-56 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
               <!-- Glowing Ring Effect -->
               <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-dark to-accent animate-spin-slow opacity-30"></div>
               <div class="absolute inset-4 rounded-full bg-gradient-to-br from-accent/20 to-transparent backdrop-blur-sm"></div>
@@ -438,6 +438,35 @@ span.invisible {
     display: none;
   }
 
+  /* Ensure content fits on mobile screens */
+  .h-screen {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+  }
 
+  /* Reduce spacing for mobile */
+  .space-y-1 > * + * {
+    margin-top: 0.25rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Force single column layout on mobile */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce padding on mobile */
+  .p-4 {
+    padding: 1rem !important;
+  }
+
+  .p-2 {
+    padding: 0.5rem !important;
+  }
 }
 </style>

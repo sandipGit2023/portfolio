@@ -29,11 +29,6 @@
           <span class="text-base font-black tracking-widest relative z-10 block">
             {{ link.initial }}
           </span>
-
-          <!-- Full name (visible on hover/active) -->
-          <span class="absolute top-0 left-1/2 transform -translate-x-1/2 text-base font-black tracking-widest opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 whitespace-nowrap bg-primary/90 backdrop-blur-sm px-2 py-1 rounded text-accent">
-            {{ link.fullName }}
-          </span>
         </nuxt-link>
       </div>
     </header>
@@ -60,11 +55,6 @@
           <!-- Initial (always visible) -->
           <span class="text-base lg:text-base font-black tracking-widest relative z-10 block lg:block">
             {{ link.initial }}
-          </span>
-
-          <!-- Full name (visible on hover/active) -->
-          <span class="absolute lg:top-0 lg:left-full lg:ml-2 top-0 left-1/2 transform lg:transform-none -translate-x-1/2 text-base font-black tracking-widest opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 whitespace-nowrap bg-primary/90 backdrop-blur-sm px-2 py-1 rounded text-accent z-50">
-            {{ link.fullName }}
           </span>
         </nuxt-link>
       </div>
