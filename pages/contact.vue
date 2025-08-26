@@ -95,8 +95,9 @@
       </div>
     </div>
 
-    <!-- Scroll Up Indicator -->
+    <!-- Scroll Up Indicator (Desktop Only) -->
     <div
+      v-if="!isMobile"
       ref="scrollUpIndicator"
       class="fixed top-8 left-1/2 transform -translate-x-1/2 z-20 opacity-0 transition-all duration-500 ease-out"
       :class="{ 'opacity-100': showScrollUpIndicator }"
@@ -119,8 +120,9 @@
       </div>
     </div>
 
-    <!-- Scroll Down Indicator -->
+    <!-- Scroll Down Indicator (Desktop Only) -->
     <div
+      v-if="!isMobile"
       ref="scrollDownIndicator"
       class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-20 opacity-0 transition-all duration-500 ease-out"
       :class="{ 'opacity-100': showScrollDownIndicator }"
@@ -143,12 +145,7 @@
       </div>
     </div>
 
-    <!-- Cursor Following Accent Circle -->
-    <div
-      ref="cursorCircle"
-      class="fixed w-12 h-12 bg-accent/60 rounded-full pointer-events-none z-50 transition-all duration-200 ease-out cursor-circle cursor-circle-glow border-2 border-accent/40"
-      style="transform: translate(-50%, -50%)"
-    ></div>
+
 
     <!-- Floating Elements -->
     <div class="absolute top-10 right-10 w-4 h-4 bg-accent rounded-full animate-bounce" />
@@ -186,19 +183,21 @@ const typeEffect = () => {
 // Use scroll navigation composable
 const { handleScrollNavigation, navigateToDirection } = useScrollNavigation()
 
-// Cursor following circle
-const cursorCircle = ref(null)
+// Scroll indicators
 const scrollUpIndicator = ref(null)
 const scrollDownIndicator = ref(null)
 const showScrollUpIndicator = ref(false)
 const showScrollDownIndicator = ref(false)
+const isMobile = ref(false)
 
-// Handle cursor movement
+// Check if device is mobile
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 768 || 'ontouchstart' in window
+}
+
+// Handle cursor movement (desktop only)
 const handleMouseMove = (event) => {
-  if (cursorCircle.value) {
-    cursorCircle.value.style.left = event.clientX + 'px'
-    cursorCircle.value.style.top = event.clientY + 'px'
-  }
+  if (isMobile.value) return
 
   // Show scroll indicators when cursor is at top or bottom of page
   const windowHeight = window.innerHeight
@@ -220,31 +219,36 @@ const handleMouseMove = (event) => {
 onMounted(() => {
   typeEffect()
 
-  // Setup infinite scroll navigation for both directions
-  const { setupListeners: setupDownListeners, cleanupListeners: cleanupDownListeners } = handleScrollNavigation({
-    direction: 'down',
-    threshold: 100,
-    delay: 500
-  })
+  // Check if mobile
+  checkMobile()
 
-  const { setupListeners: setupUpListeners, cleanupListeners: cleanupUpListeners } = handleScrollNavigation({
-    direction: 'up',
-    threshold: 50,
-    delay: 500
-  })
+  // Only setup scroll navigation for desktop
+  if (!isMobile.value) {
+    const { setupListeners: setupDownListeners, cleanupListeners: cleanupDownListeners } = handleScrollNavigation({
+      direction: 'down',
+      threshold: 100,
+      delay: 500
+    })
 
-  setupDownListeners()
-  setupUpListeners()
+    const { setupListeners: setupUpListeners, cleanupListeners: cleanupUpListeners } = handleScrollNavigation({
+      direction: 'up',
+      threshold: 50,
+      delay: 500
+    })
 
-  // Setup cursor following
-  document.addEventListener('mousemove', handleMouseMove)
+    setupDownListeners()
+    setupUpListeners()
 
-  // Store cleanup function for unmount
-  onUnmounted(() => {
-    cleanupDownListeners()
-    cleanupUpListeners()
-    document.removeEventListener('mousemove', handleMouseMove)
-  })
+    // Setup mouse move listener for desktop only
+    document.addEventListener('mousemove', handleMouseMove)
+
+    // Store cleanup function for unmount
+    onUnmounted(() => {
+      cleanupDownListeners()
+      cleanupUpListeners()
+      document.removeEventListener('mousemove', handleMouseMove)
+    })
+  }
 })
 </script>
 
