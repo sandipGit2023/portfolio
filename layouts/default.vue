@@ -6,8 +6,34 @@
       <div class="absolute bottom-10 right-10 w-24 h-24 bg-accent/8 rounded-full blur-xl animate-pulse delay-1000" />
     </div>
 
-    <!-- Navigation Sidebar -->
-    <nav class="relative z-10 lg:w-24 w-full lg:h-screen h-auto lg:border-r border-b border-white/20 bg-white/10 backdrop-blur-md">
+    <!-- Mobile Top Header (Sticky) -->
+    <header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+      <div class="flex justify-around items-center p-4">
+        <nuxt-link
+          v-for="(link, index) in links"
+          :key="index"
+          :to="link.to"
+          class="group relative transition-all duration-500 ease-in-out py-2 px-4 rounded-lg"
+          :class="{
+            'text-accent': $route.path === link.to,
+            'text-white/60 hover:text-white': $route.path !== link.to,
+          }"
+        >
+          <!-- Active indicator -->
+          <div
+            v-if="$route.path === link.to"
+            class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-accent rounded-full animate-pulse shadow-glow"
+          />
+
+          <span class="text-base font-black tracking-widest relative z-10 block">
+            {{ link.label }}
+          </span>
+        </nuxt-link>
+      </div>
+    </header>
+
+    <!-- Navigation Sidebar (Desktop Only) -->
+    <nav class="hidden lg:flex relative z-10 lg:w-24 w-full lg:h-screen h-auto lg:border-r border-b border-white/20 bg-white/10 backdrop-blur-md">
       <div class="lg:flex lg:flex-col lg:space-y-8 lg:justify-center lg:items-center lg:p-6 flex flex-row justify-around items-center p-4 lg:p-6">
         <nuxt-link
           v-for="(link, index) in links"
@@ -33,7 +59,7 @@
     </nav>
 
     <!-- Main Content Area -->
-    <main class="relative z-10 flex-grow w-full lg:h-screen overflow-auto">
+    <main class="relative z-10 flex-grow w-full lg:h-screen overflow-auto lg:pt-0 pt-16">
       <div class="h-full">
         <slot />
       </div>
