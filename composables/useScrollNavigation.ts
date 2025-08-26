@@ -2,11 +2,11 @@ export const useScrollNavigation = () => {
   const router = useRouter()
   let lastScrollY = 0
   let isNavigating = false
-  let scrollThreshold = 100
-  let navigationDelay = 500
+  const scrollThreshold = 100
+  const navigationDelay = 500
 
   // Define the page order for infinite scrolling
-  const pageOrder = ["/", "/work", "/about", "/contact"]
+  const pageOrder = ['/', '/work', '/about', '/contact']
 
   const getCurrentPageIndex = () => {
     const currentRoute = router.currentRoute.value.path
@@ -35,7 +35,7 @@ export const useScrollNavigation = () => {
 
       let shouldNavigate = false
 
-      if (direction === "down") {
+      if (direction === 'down') {
         shouldNavigate = currentScrollY > lastScrollY && currentScrollY > threshold
       } else {
         shouldNavigate = currentScrollY < lastScrollY && currentScrollY < threshold
@@ -45,15 +45,15 @@ export const useScrollNavigation = () => {
         isNavigating = true
 
         // Add fade out effect
-        const mainElement = document.querySelector(".w-full.h-full.min-h-screen")
+        const mainElement = document.querySelector('.w-full.h-full.min-h-screen')
         if (mainElement) {
-          mainElement.style.transition = "opacity 0.5s ease-out"
-          mainElement.style.opacity = "0"
+          mainElement.style.transition = 'opacity 0.5s ease-out'
+          mainElement.style.opacity = '0'
         }
 
         // Navigate to next/previous page
         setTimeout(() => {
-          const targetRoute = direction === "down" ? getNextPage() : getPreviousPage()
+          const targetRoute = direction === 'down' ? getNextPage() : getPreviousPage()
           router.push(targetRoute)
         }, delay)
       }
@@ -66,7 +66,7 @@ export const useScrollNavigation = () => {
 
       let shouldNavigate = false
 
-      if (direction === "down") {
+      if (direction === 'down') {
         shouldNavigate = event.deltaY > 0
       } else {
         shouldNavigate = event.deltaY < 0 && window.scrollY < threshold
@@ -76,33 +76,33 @@ export const useScrollNavigation = () => {
         isNavigating = true
 
         // Add fade out effect
-        const mainElement = document.querySelector(".w-full.h-full.min-h-screen")
+        const mainElement = document.querySelector('.w-full.h-full.min-h-screen')
         if (mainElement) {
-          mainElement.style.transition = "opacity 0.5s ease-out"
-          mainElement.style.opacity = "0"
+          mainElement.style.transition = 'opacity 0.5s ease-out'
+          mainElement.style.opacity = '0'
         }
 
         // Navigate to next/previous page
         setTimeout(() => {
-          const targetRoute = direction === "down" ? getNextPage() : getPreviousPage()
+          const targetRoute = direction === 'down' ? getNextPage() : getPreviousPage()
           router.push(targetRoute)
         }, delay)
       }
     }
 
     const setupListeners = () => {
-      window.addEventListener("scroll", handleScroll, { passive: true })
-      window.addEventListener("wheel", handleWheel, { passive: true })
+      window.addEventListener('scroll', handleScroll, { passive: true })
+      window.addEventListener('wheel', handleWheel, { passive: true })
     }
 
     const cleanupListeners = () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("wheel", handleWheel)
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('wheel', handleWheel)
     }
 
     return {
       setupListeners,
-      cleanupListeners
+      cleanupListeners,
     }
   }
 
@@ -113,15 +113,15 @@ export const useScrollNavigation = () => {
     isNavigating = true
 
     // Add fade out effect
-    const mainElement = document.querySelector(".w-full.h-full.min-h-screen")
+    const mainElement = document.querySelector('.w-full.h-full.min-h-screen')
     if (mainElement) {
-      mainElement.style.transition = "opacity 0.5s ease-out"
-      mainElement.style.opacity = "0"
+      mainElement.style.transition = 'opacity 0.5s ease-out'
+      mainElement.style.opacity = '0'
     }
 
     // Navigate to next/previous page
     setTimeout(() => {
-      const targetRoute = direction === "down" ? getNextPage() : getPreviousPage()
+      const targetRoute = direction === 'down' ? getNextPage() : getPreviousPage()
       router.push(targetRoute)
     }, navigationDelay)
   }
@@ -132,6 +132,6 @@ export const useScrollNavigation = () => {
     getCurrentPageIndex,
     getNextPage,
     getPreviousPage,
-    pageOrder
+    pageOrder,
   }
 }

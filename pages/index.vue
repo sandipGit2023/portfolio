@@ -9,7 +9,7 @@
 
     <!-- Floating Tech Bubbles -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                  <!-- Tech Bubbles - Right Side -->
+      <!-- Tech Bubbles - Right Side -->
       <div class="floating-bubble" style="--delay: 0s; --duration: 8s; --x: 75%; --y: 15%; --size: 70px;">
         <div class="bubble-content">
           <Icon name="mdi:laravel" class="w-6 h-6 text-accent" />
@@ -57,30 +57,42 @@
       <div class="floating-bubble" style="--delay: 0.5s; --duration: 9.5s; --x: 68%; --y: 10%; --size: 100px;">
         <div class="bubble-content stats-bubble">
           <div class="text-center">
-            <div class="text-3xl font-bold text-black">4+</div>
-            <div class="text-sm text-black/70">Years</div>
+            <div class="text-3xl font-bold text-black">
+              4+
+            </div>
+            <div class="text-sm text-black/70">
+              Years
+            </div>
           </div>
         </div>
       </div>
       <div class="floating-bubble" style="--delay: 2.5s; --duration: 11.5s; --x: 92%; --y: 30%; --size: 95px;">
         <div class="bubble-content stats-bubble">
           <div class="text-center">
-            <div class="text-3xl font-bold text-black">6+</div>
-            <div class="text-sm text-black/70">Projects</div>
+            <div class="text-3xl font-bold text-black">
+              6+
+            </div>
+            <div class="text-sm text-black/70">
+              Projects
+            </div>
           </div>
         </div>
       </div>
       <div class="floating-bubble" style="--delay: 4.5s; --duration: 13.5s; --x: 68%; --y: 80%; --size: 90px;">
         <div class="bubble-content stats-bubble">
           <div class="text-center">
-            <div class="text-3xl font-bold text-black">5+</div>
-            <div class="text-sm text-black/70">Skills</div>
+            <div class="text-3xl font-bold text-black">
+              5+
+            </div>
+            <div class="text-sm text-black/70">
+              Skills
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-        <!-- Grid Layout -->
+    <!-- Grid Layout -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white h-screen lg:min-h-screen pt-16 lg:pt-0">
       <!-- Left Column - Content (Full width on mobile) -->
       <div class="col-span-1 lg:col-span-1 flex items-center lg:justify-center justify-start w-full p-6 sm:p-6 lg:p-12">
@@ -184,16 +196,15 @@
             <!-- Main Image with Creative Effects -->
             <div class="relative w-56 h-56 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
               <!-- Glowing Ring Effect -->
-              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-dark to-accent animate-spin-slow opacity-30"></div>
-              <div class="absolute inset-4 rounded-full bg-gradient-to-br from-accent/20 to-transparent backdrop-blur-sm"></div>
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-dark to-accent animate-spin-slow opacity-30" />
+              <div class="absolute inset-4 rounded-full bg-gradient-to-br from-accent/20 to-transparent backdrop-blur-sm" />
 
               <!-- Main Image -->
               <div class="relative w-full h-full rounded-full bg-gradient-to-br from-accent to-accent-dark p-2">
                 <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover">
               </div>
             </div>
-
-                       </div>
+          </div>
         </div>
       </div>
     </div>
@@ -217,13 +228,11 @@
           </div>
           <!-- Animated arrow -->
           <div class="mt-2 flex justify-center">
-            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform rotate-45 animate-bounce"></div>
+            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform rotate-45 animate-bounce" />
           </div>
         </div>
       </div>
     </div>
-
-
   </div>
 </template>
 
@@ -292,7 +301,7 @@ onMounted(() => {
     const { setupListeners, cleanupListeners } = handleScrollNavigation({
       direction: 'down',
       threshold: 100,
-      delay: 500
+      delay: 500,
     })
 
     setupListeners()
@@ -416,8 +425,6 @@ span.invisible {
   border-color: #00e187;
   box-shadow: 0 0 25px rgba(0, 255, 153, 0.5);
 }
-
-
 
 /* Floating animation for bubbles and tech icons */
 @keyframes float {

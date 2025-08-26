@@ -59,7 +59,7 @@
           </div>
           <!-- Animated arrow -->
           <div class="mt-2 flex justify-center">
-            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform -rotate-135 animate-bounce"></div>
+            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform -rotate-135 animate-bounce" />
           </div>
         </div>
       </div>
@@ -84,13 +84,11 @@
           </div>
           <!-- Animated arrow -->
           <div class="mt-2 flex justify-center">
-            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform rotate-45 animate-bounce"></div>
+            <div class="w-4 h-4 border-r-2 border-b-2 border-accent transform rotate-45 animate-bounce" />
           </div>
         </div>
       </div>
     </div>
-
-
 
     <!-- Floating Elements -->
     <div class="absolute top-10 right-10 w-4 h-4 bg-accent rounded-full animate-bounce" />
@@ -227,13 +225,13 @@ onMounted(() => {
     const { setupListeners: setupDownListeners, cleanupListeners: cleanupDownListeners } = handleScrollNavigation({
       direction: 'down',
       threshold: 100,
-      delay: 500
+      delay: 500,
     })
 
     const { setupListeners: setupUpListeners, cleanupListeners: cleanupUpListeners } = handleScrollNavigation({
       direction: 'up',
       threshold: 50,
-      delay: 500
+      delay: 500,
     })
 
     setupDownListeners()
