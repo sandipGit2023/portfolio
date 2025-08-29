@@ -8,7 +8,7 @@
     </div>
 
     <!-- Grid Layout -->
-    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white h-screen lg:min-h-screen pt-16 lg:pt-0">
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen lg:h-screen pt-16 lg:pt-0">
       <!-- Left Column - Content (Full width on mobile) -->
       <div class="col-span-1 lg:col-span-1 flex items-center lg:justify-center justify-start w-full p-6 sm:p-6 lg:p-12">
         <div class="creative-left-section">
@@ -21,7 +21,7 @@
             <div class="floating-line line-2"></div>
           </div>
 
-          <div class="w-full lg:max-w-lg animate-fade-in relative z-10">
+          <div class="w-full max-w-full lg:max-w-lg animate-fade-in relative z-10">
             <div class="mb-6 lg:mb-8">
               <h2 class="lg:text-2xl text-xl uppercase hidden lg:block mb-4 text-accent font-bold tracking-wider">
                 <span class="block w-[200px] min-h-[1.5em] relative">
@@ -41,7 +41,7 @@
             </div>
 
             <h2 class="lg:text-2xl text-xl uppercase block lg:hidden mt-4 lg:mt-6 mb-6 lg:mb-8 text-accent font-bold">
-              <span class="block w-[200px] min-h-[1.5em] relative">
+              <span class="block w-[200px] max-h-[1.5em] md:min-h-[1.5em] relative">
                 <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
                 <span class="invisible">software developer</span>
               </span>
@@ -50,7 +50,7 @@
             <!-- Creative Tech Stats Section -->
             <div class="creative-tech-section mt-8 lg:mt-12">
               <!-- Floating Tech Header -->
-              <div class="floating-tech-header">
+              <div class="floating-tech-header p-0">
                 <span class="creative-tech-label">Experience Overview</span>
                 <div class="creative-tech-count">3</div>
               </div>
@@ -105,7 +105,7 @@
           <!-- Creative Image Container -->
           <div class="relative group mb-8">
             <!-- Main Image with Creative Effects -->
-            <div class="relative w-56 h-56 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
+            <div class="relative w-48 h-48 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
               <!-- Outer Glowing Ring Effect -->
               <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-dark to-accent animate-spin-slow opacity-30" />
               <div class="absolute inset-4 rounded-full bg-gradient-to-br from-accent/20 to-transparent backdrop-blur-sm" />
@@ -135,9 +135,9 @@
           </div>
 
           <!-- Social Buttons Section -->
-          <div class="social-buttons-container">
+          <div class="social-buttons-container mb-10">
             <!-- Download CV Button -->
-            <div class="cv-button-wrapper">
+            <div class="cv-button-wrapper mt-2 md:mt-10">
               <NuxtLink
                 href="/cv/Sandip_Ghodasara_Int_new.pdf"
                 target="_blank"
@@ -161,7 +161,7 @@
             </div>
 
             <!-- Social Icons -->
-            <div class="social-icons-container">
+            <div class="social-icons-container mt-2 md:mt-10">
               <div class="social-icon-wrapper">
                 <NuxtLink
                   to="https://github.com/sandipGit2023"
@@ -1115,65 +1115,217 @@ span.invisible {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .floating-bubble {
-    display: none;
-  }
-
-  /* Ensure content fits on mobile screens */
-  .h-screen {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    overflow: hidden !important;
-  }
-
-  /* Reduce spacing for mobile */
-  .space-y-1 > * + * {
-    margin-top: 0.25rem !important;
-  }
-
-  .mb-4 {
-    margin-bottom: 1rem !important;
-  }
-
-  /* Force single column layout on mobile */
+  /* Grid layout adjustments */
   .grid {
     grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
 
-  /* Reduce padding on mobile */
-  .p-4 {
+  /* Container adjustments */
+  .col-span-1 {
     padding: 1rem !important;
   }
 
-  .p-2 {
-    padding: 0.5rem !important;
+  /* Typography adjustments */
+  .lg\:text-8xl {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
   }
 
-  /* Mobile adjustments for social buttons */
+  .lg\:text-2xl {
+    font-size: 1.25rem !important;
+  }
+
+  /* Creative left section mobile adjustments */
+  .creative-left-section {
+    padding: 1.5rem !important;
+    min-height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  /* Floating elements mobile adjustments */
+  .floating-orb {
+    display: none !important;
+  }
+
+  .floating-line {
+    display: none !important;
+  }
+
+  /* Tech section mobile adjustments */
+  .creative-tech-section {
+    gap: 1rem !important;
+  }
+
+  .floating-tech-header {
+    flex-direction: row !important;
+    gap: 1rem !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .creative-tech-label {
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+  }
+
+  .creative-tech-count {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
+    min-width: 2.5rem !important;
+    text-align: center !important;
+  }
+
+  /* Tech grid mobile adjustments */
+  .creative-tech-grid {
+    gap: 0.75rem !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .creative-badge-content {
+    padding: 0.75rem 0.875rem !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+  }
+
+  .creative-tech-icon {
+    width: 2rem !important;
+    height: 2rem !important;
+    font-size: 0.875rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .creative-tech-name {
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+  }
+
+  /* Social buttons mobile adjustments */
   .social-buttons-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+    align-items: center !important;
+  }
+
+  .cv-button-wrapper {
+    width: 100% !important;
+    max-width: 280px !important;
   }
 
   .cv-button {
-    padding: 0.875rem 1.5rem;
+    padding: 0.875rem 1.5rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .button-text {
+    font-size: 0.75rem !important;
+  }
+
+  .button-icon {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  /* Social icons mobile adjustments */
+  .social-icons-container {
+    gap: 1.5rem !important;
+    justify-content: center !important;
   }
 
   .social-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem !important;
+    height: 3.5rem !important;
   }
 
   .icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
   }
 
-  /* Mobile adjustments for left section */
-  .left-section-background {
-    padding: 1.5rem;
+  /* Image mobile adjustments */
+  .relative.w-56.h-56.sm\:w-80.sm\:h-80.lg\:w-96.lg\:h-96 {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  /* Typing animation mobile adjustments */
+  .typing {
+    font-size: 1rem !important;
+  }
+
+  /* Spacing adjustments */
+  .space-y-3 > * + * {
+    margin-top: 0.375rem !important;
+  }
+
+  .space-y-4 > * + * {
+    margin-top: 0.5rem !important;
+  }
+
+  .mb-6 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mt-8 {
+    margin-top: 1.5rem !important;
+  }
+
+  .mt-12 {
+    margin-top: 2rem !important;
+  }
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 480px) {
+  .lg\:text-8xl {
+    font-size: 2.5rem !important;
+  }
+
+  .creative-left-section {
+    padding: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .creative-tech-grid {
+    gap: 0.5rem !important;
+  }
+
+  .creative-badge-content {
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  .social-buttons-container {
+    gap: 1rem !important;
+  }
+
+  .cv-button {
+    padding: 0.75rem 1.25rem !important;
+  }
+
+  .social-icon {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  .icon {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
   }
 }
 </style>
