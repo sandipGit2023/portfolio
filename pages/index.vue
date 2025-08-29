@@ -47,7 +47,7 @@
               </span>
             </h2>
 
-            <!-- Creative Tech Stats Section -->
+                        <!-- Creative Tech Stats Section -->
             <div class="creative-tech-section mt-8 lg:mt-12">
               <!-- Floating Tech Header -->
               <div class="floating-tech-header p-0">
@@ -63,11 +63,11 @@
                     <span class="creative-tech-name">Years Exp</span>
                   </div>
                   <div class="creative-badge-glow"></div>
-                  <div class="creative-badge-ripple"></div>
                   <div class="creative-badge-particles">
                     <div class="creative-particle"></div>
                     <div class="creative-particle"></div>
                   </div>
+                  <div class="creative-badge-magnetic"></div>
                 </div>
                 <div class="creative-tech-badge" style="--delay: 120ms">
                   <div class="creative-badge-content">
@@ -75,11 +75,11 @@
                     <span class="creative-tech-name">Projects</span>
                   </div>
                   <div class="creative-badge-glow"></div>
-                  <div class="creative-badge-ripple"></div>
                   <div class="creative-badge-particles">
                     <div class="creative-particle"></div>
                     <div class="creative-particle"></div>
                   </div>
+                  <div class="creative-badge-magnetic"></div>
                 </div>
                 <div class="creative-tech-badge" style="--delay: 240ms">
                   <div class="creative-badge-content">
@@ -87,11 +87,11 @@
                     <span class="creative-tech-name">Skills</span>
                   </div>
                   <div class="creative-badge-glow"></div>
-                  <div class="creative-badge-ripple"></div>
                   <div class="creative-badge-particles">
                     <div class="creative-particle"></div>
                     <div class="creative-particle"></div>
                   </div>
+                  <div class="creative-badge-magnetic"></div>
                 </div>
               </div>
             </div>
@@ -486,9 +486,13 @@ span.invisible {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  transition: all 0.3s ease;
   position: relative;
   z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.floating-tech-header:hover .creative-tech-label {
+  color: #00ff99;
   text-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
 }
 
@@ -496,7 +500,7 @@ span.invisible {
 /* Creative Left Section */
 .creative-left-section {
   position: relative;
-  padding: 2rem;
+  padding: 4rem;
   min-height: 400px;
   overflow: hidden;
 }
@@ -584,6 +588,39 @@ span.invisible {
   }
 }
 
+/* Creative Tech Stats Section */
+.creative-tech-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Floating Tech Header */
+.floating-tech-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.creative-tech-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.floating-tech-header:hover .creative-tech-label {
+  color: #00ff99;
+  text-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
 .creative-tech-count {
   background: linear-gradient(135deg, rgba(0, 255, 153, 0.3), rgba(0, 255, 153, 0.15));
   color: #00ff99;
@@ -592,24 +629,233 @@ span.invisible {
   padding: 0.5rem 0.75rem;
   border-radius: 1rem;
   border: 2px solid rgba(0, 255, 153, 0.4);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
   text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
 .creative-tech-count:hover {
-  background: linear-gradient(135deg, rgba(0, 255, 153, 0.4), rgba(0, 255, 153, 0.25));
-  border-color: rgba(0, 255, 153, 0.6);
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 255, 153, 0.3);
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.5), rgba(0, 255, 153, 0.3));
+  border-color: #00ff99;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 255, 153, 0.2);
 }
 
 /* Creative Tech Grid */
 .creative-tech-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
   position: relative;
+}
+
+/* Creative Tech Badge */
+.creative-tech-badge {
+  position: relative;
+  animation: creativeSlideIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px) scale(0.8);
+  animation-delay: var(--delay);
+  cursor: pointer;
+}
+
+@keyframes creativeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8) rotate(-5deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-8px) scale(1.1) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+.creative-badge-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* CRAZY HOVER EFFECTS */
+.creative-tech-badge:hover .creative-badge-content {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.25), rgba(0, 255, 153, 0.12));
+  border-color: rgba(0, 255, 153, 0.6);
+  transform: translateY(-8px) scale(1.1) rotate(3deg);
+  box-shadow: 0 25px 60px rgba(0, 255, 153, 0.4), 0 0 50px rgba(0, 255, 153, 0.3);
+  animation: crazyShake 0.6s ease-in-out;
+}
+
+@keyframes crazyShake {
+  0%, 100% { transform: translateY(-8px) scale(1.1) rotate(3deg); }
+  25% { transform: translateY(-8px) scale(1.1) rotate(-2deg); }
+  50% { transform: translateY(-8px) scale(1.1) rotate(5deg); }
+  75% { transform: translateY(-8px) scale(1.1) rotate(-1deg); }
+}
+
+.creative-badge-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 153, 0.2), transparent);
+  border-radius: 1rem;
+  opacity: 0;
+  filter: blur(20px);
+  transition: all 0.4s ease;
+}
+
+.creative-tech-badge:hover .creative-badge-glow {
+  opacity: 0.6;
+  filter: blur(8px);
+  transform: scale(1.05);
+  animation: pulseGlow 1s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1.05); }
+  50% { opacity: 0.4; transform: scale(1.08); }
+}
+
+.creative-badge-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.creative-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00ff99;
+  border-radius: 50%;
+  opacity: 0;
+  animation: creativeParticleFloat 3s ease-out infinite;
+}
+
+.creative-tech-badge:hover .creative-particle {
+  animation: crazyParticleFloat 1.5s ease-out infinite;
+}
+
+@keyframes crazyParticleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.2) rotate(90deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px) scale(0.8) rotate(180deg);
+  }
+  75% {
+    opacity: 0.8;
+    transform: translateY(-60px) scale(1.1) rotate(270deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0) rotate(360deg);
+  }
+}
+
+.creative-particle:nth-child(1) {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.creative-particle:nth-child(2) {
+  top: 70%;
+  right: 20%;
+  animation-delay: 0.5s;
+}
+
+/* Magnetic Effect */
+.creative-badge-magnetic {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: radial-gradient(circle at var(--mouse-x, center) var(--mouse-y, center),
+              rgba(0, 255, 153, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.creative-tech-badge:hover .creative-badge-magnetic {
+  opacity: 1;
+  animation: magneticPulse 2s ease-in-out infinite;
+}
+
+@keyframes magneticPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* Creative Tech Icon */
+.creative-tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.3), rgba(0, 255, 153, 0.15));
+  color: #00ff99;
+  font-size: 0.875rem;
+  font-weight: 800;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 153, 0.3);
+  text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}
+
+.creative-tech-badge:hover .creative-tech-icon {
+  background: linear-gradient(135deg, #00ff99, rgba(0, 255, 153, 0.9));
+  color: #000;
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(0, 255, 153, 0.5);
+  animation: iconSpin 0.8s ease-in-out;
+}
+
+@keyframes iconSpin {
+  0% { transform: scale(1.2) rotate(5deg); }
+  50% { transform: scale(1.3) rotate(185deg); }
+  100% { transform: scale(1.2) rotate(365deg); }
+}
+
+/* Creative Tech Name */
+.creative-tech-name {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.creative-tech-badge:hover .creative-tech-name {
+  color: #00ff99;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0, 255, 153, 0.6);
+  animation: textGlow 1s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 15px rgba(0, 255, 153, 0.6); }
+  50% { text-shadow: 0 0 25px rgba(0, 255, 153, 0.8), 0 0 35px rgba(0, 255, 153, 0.4); }
 }
 
 /* Creative Tech Badge */
@@ -1156,36 +1402,47 @@ span.invisible {
     display: none !important;
   }
 
-  /* Tech section mobile adjustments */
-  .creative-tech-section {
+  /* Experience section mobile adjustments */
+  .experience-section {
     gap: 1rem !important;
   }
 
-  .floating-tech-header {
-    flex-direction: row !important;
-    gap: 1rem !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    margin-bottom: 0.75rem !important;
+  .section-header {
+    gap: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
   }
 
-  .creative-tech-label {
+  .section-title {
     font-size: 0.875rem !important;
-    font-weight: 600 !important;
   }
 
-  .creative-tech-count {
-    font-size: 0.75rem !important;
-    padding: 0.5rem 0.75rem !important;
-    min-width: 2.5rem !important;
-    text-align: center !important;
-  }
-
-  /* Tech grid mobile adjustments */
-  .creative-tech-grid {
+  /* Stats grid mobile adjustments */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
     gap: 0.75rem !important;
-    flex-direction: column !important;
-    width: 100% !important;
+  }
+
+  .stat-card {
+    padding: 0.875rem !important;
+    gap: 0.625rem !important;
+  }
+
+  .stat-icon {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
+  .stat-icon .icon {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  .stat-number {
+    font-size: 1rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.625rem !important;
   }
 
   .creative-badge-content {
