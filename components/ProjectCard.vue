@@ -23,7 +23,9 @@
         <!-- Compact Header -->
         <div class="tech-header-compact">
           <span class="tech-label">Tech Stack</span>
-          <div class="tech-count">{{ project.stock.length }}</div>
+          <div class="tech-count">
+            {{ project.stock.length }}
+          </div>
         </div>
 
         <!-- Compact Tech Grid -->

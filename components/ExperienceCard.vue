@@ -41,6 +41,7 @@
 
 <script setup>
 const experience = ref([
+  { year: '2024 - present', title: 'Freelancer', institute: 'own world..' },
   { year: '2024 - 2024', title: 'Senior Software Engineer', institute: 'Intelivita Private Limited' },
   { year: '2022 - 2024', title: 'Senior Software Engineer', institute: 'Bytes Technolab Private Limited' },
   { year: '2021 - 2022', title: 'Junior Web Developer', institute: 'Weboccult Technologies Pvt. Ltd.' },

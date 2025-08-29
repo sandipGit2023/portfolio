@@ -64,6 +64,14 @@
         border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
+    /* Professional glass card effect */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
     /* Smooth transitions */
     .transition-smooth {
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -86,9 +94,14 @@
         box-shadow: 0 0 50px rgba(0, 255, 153, 0.5), 0 0 100px rgba(0, 255, 153, 0.3);
     }
 
-    /* Neon glow effect */
+    /* Professional neon glow effect */
     .neon-glow {
-        text-shadow: 0 0 10px var(--tw-color-accent), 0 0 20px var(--tw-color-accent), 0 0 30px var(--tw-color-accent);
+        text-shadow:
+            0 0 10px var(--tw-color-accent),
+            0 0 20px var(--tw-color-accent),
+            0 0 30px var(--tw-color-accent),
+            0 0 40px var(--tw-color-accent);
+        animation: neonPulse 2s ease-in-out infinite alternate;
     }
 
     /* Floating animation */
@@ -108,6 +121,27 @@
         animation: shimmer 2s infinite;
     }
 
+    /* Professional button glow effects */
+    .btn-glow {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-glow::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    .btn-glow:hover::before {
+        left: 100%;
+    }
+
     /* Mobile-specific improvements */
     .mobile-touch-target {
         min-height: 44px;
@@ -124,6 +158,24 @@
         padding-right: env(safe-area-inset-right);
         padding-top: env(safe-area-inset-top);
         padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    /* Professional grid background */
+    .grid-bg {
+        background-image:
+            linear-gradient(rgba(0,255,153,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,255,153,0.1) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+
+    /* Enhanced typing animation */
+    .typing-enhanced {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid var(--tw-color-accent);
+        animation: blink 0.7s infinite, glow 2s ease-in-out infinite alternate;
+        transition: width 0.2s ease;
     }
 }
 
@@ -295,14 +347,10 @@ html {
     }
 }
 
-/* Enhanced typing animation */
-.typing-enhanced {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid var(--tw-color-accent);
-    animation: blink 0.7s infinite, glow 2s ease-in-out infinite alternate;
-    transition: width 0.2s ease;
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 @keyframes glow {
@@ -311,6 +359,22 @@ html {
     }
     to {
         text-shadow: 0 0 20px var(--tw-color-accent), 0 0 30px var(--tw-color-accent);
+    }
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow:
+            0 0 10px var(--tw-color-accent),
+            0 0 20px var(--tw-color-accent),
+            0 0 30px var(--tw-color-accent);
+    }
+    to {
+        text-shadow:
+            0 0 20px var(--tw-color-accent),
+            0 0 30px var(--tw-color-accent),
+            0 0 40px var(--tw-color-accent),
+            0 0 50px var(--tw-color-accent);
     }
 }
 
@@ -574,14 +638,6 @@ html {
     }
 }
 
-/* Glass morphism enhancements */
-.glass-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
 /* Interactive button effects */
 .btn-glow {
     position: relative;
@@ -601,4 +657,61 @@ html {
 
 .btn-glow:hover::before {
     left: 100%;
+}
+
+/* Professional badge styling */
+.professional-badge {
+    background: rgba(0, 255, 153, 0.1);
+    border: 1px solid rgba(0, 255, 153, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 255, 153, 0.1);
+}
+
+/* Enhanced image hover effects */
+.image-hover {
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 255, 153, 0.3);
+}
+
+/* Professional stats styling */
+.stats-item {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stats-item:hover {
+    background: rgba(0, 255, 153, 0.1);
+    border-color: rgba(0, 255, 153, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Navigation dots styling */
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot:hover {
+    border-color: var(--tw-color-accent);
+    background: var(--tw-color-accent);
+    transform: scale(1.2);
+}
+
+.nav-dot.active {
+    background: var(--tw-color-accent);
+    border-color: var(--tw-color-accent);
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
