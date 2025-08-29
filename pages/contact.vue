@@ -153,6 +153,49 @@
 </template>
 
 <script setup>
+// SEO Meta Tags
+useHead({
+  title: 'Contact Sandip Ghodasara - Senior Software Engineer | Ahmedabad',
+  meta: [
+    { name: 'description', content: 'Get in touch with Sandip Ghodasara, Senior Software Engineer in Ahmedabad. Available for freelance projects, full-time opportunities, and technical consultations.' },
+    { name: 'keywords', content: 'Contact Sandip Ghodasara, Software Engineer Ahmedabad, Laravel Developer Contact, Vue.js Developer Contact, React Developer Contact, Freelance Developer, Web Development Services' },
+    { property: 'og:title', content: 'Contact Sandip Ghodasara - Senior Software Engineer' },
+    { property: 'og:description', content: 'Get in touch with Sandip Ghodasara, Senior Software Engineer in Ahmedabad. Available for freelance projects and technical consultations.' },
+    { property: 'og:url', content: 'https://sandipghodasara.com/contact' },
+    { name: 'twitter:title', content: 'Contact Sandip Ghodasara - Senior Software Engineer' },
+    { name: 'twitter:description', content: 'Get in touch with Sandip Ghodasara, Senior Software Engineer in Ahmedabad. Available for freelance projects and technical consultations.' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://sandipghodasara.com/contact' },
+  ],
+})
+
+// JSON-LD Structured Data
+useSeoMeta({
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      'name': 'Sandip Ghodasara',
+      'jobTitle': 'Senior Software Engineer',
+      'description': 'Senior Software Engineer available for freelance projects and technical consultations.',
+      'url': 'https://sandipghodasara.com/contact',
+      'telephone': '+919173420297',
+      'email': 'ghodasarasandip011@gmail.com',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Ahmedabad',
+        'addressRegion': 'Gujarat',
+        'addressCountry': 'IN',
+      },
+      'sameAs': [
+        'https://linkedin.com/in/sandipghodasara',
+        'https://github.com/sandipghodasara',
+      ],
+    }),
+  },
+})
+
 const phrases = ['let\'s work together']
 const currentText = ref('')
 let currentPhrase = 0

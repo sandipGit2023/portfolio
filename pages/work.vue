@@ -98,6 +98,52 @@
 </template>
 
 <script setup>
+// SEO Meta Tags
+useHead({
+  title: 'Portfolio Projects - Sandip Ghodasara | Laravel, Vue.js, React Developer',
+  meta: [
+    { name: 'description', content: 'Explore Sandip Ghodasara\'s portfolio of innovative projects including Trady, Jib, AEIS, Eatcard, and HorseBet. Built with Laravel, Vue.js, React, Node.js, and modern web technologies.' },
+    { name: 'keywords', content: 'Sandip Ghodasara Portfolio, Laravel Projects, Vue.js Projects, React Projects, Web Development Projects, SaaS Development, API Development, Full Stack Projects, Ahmedabad Developer' },
+    { property: 'og:title', content: 'Portfolio Projects - Sandip Ghodasara' },
+    { property: 'og:description', content: 'Explore Sandip Ghodasara\'s portfolio of innovative projects including Trady, Jib, AEIS, Eatcard, and HorseBet.' },
+    { property: 'og:url', content: 'https://sandipghodasara.com/work' },
+    { name: 'twitter:title', content: 'Portfolio Projects - Sandip Ghodasara' },
+    { name: 'twitter:description', content: 'Explore Sandip Ghodasara\'s portfolio of innovative projects including Trady, Jib, AEIS, Eatcard, and HorseBet.' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://sandipghodasara.com/work' },
+  ],
+})
+
+// JSON-LD Structured Data
+useSeoMeta({
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      'name': 'Sandip Ghodasara',
+      'jobTitle': 'Senior Software Engineer',
+      'description': 'Senior Software Engineer with expertise in Laravel, Vue.js, React, and Node.js development.',
+      'url': 'https://sandipghodasara.com/work',
+      'hasOccupation': {
+        '@type': 'Occupation',
+        'name': 'Senior Software Engineer',
+      },
+      'knowsAbout': [
+        'Laravel',
+        'Vue.js',
+        'React',
+        'Node.js',
+        'TypeScript',
+        'JavaScript',
+        'API Development',
+        'Web Development',
+        'SaaS Development',
+      ],
+    }),
+  },
+})
+
 const projects = ref([
   { num: '01', name: 'Trady', description: 'Empowering service professionals with instant website creation, online booking, payments, and streamlined job management.', stock: ['Laravel', 'Next', 'Node', 'MySQL'] },
   { num: '02', name: 'Jib', description: 'AI-powered Superapp enabling no-code SaaS creation through natural language, automating content, payments, and workflow integrations.', stock: ['Laravel', 'Nuxt', 'MySQL'] },

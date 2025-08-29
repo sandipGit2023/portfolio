@@ -237,6 +237,83 @@
 </template>
 
 <script setup>
+// SEO Meta Tags
+useHead({
+  title: 'Sandip Ghodasara - Senior Software Engineer | Home',
+  meta: [
+    { name: 'description', content: 'Senior Software Engineer specializing in Laravel, Vue.js, React, and Node.js. Crafting high-performance APIs, intuitive admin panels, and AI-powered solutions.' },
+    { name: 'keywords', content: 'Software Engineer, Laravel Developer, Vue.js Developer, React Developer, Node.js Developer, Full Stack Developer, API Development, Web Development, Ahmedabad' },
+    { property: 'og:title', content: 'Sandip Ghodasara - Senior Software Engineer' },
+    { property: 'og:description', content: 'Passionate Software Engineer crafting high-performance APIs, intuitive admin panels, and AI-powered solutions to drive innovation, efficiency, and scalability.' },
+    { property: 'og:url', content: 'https://sandipghodasara.com' },
+    { name: 'twitter:title', content: 'Sandip Ghodasara - Senior Software Engineer' },
+    { name: 'twitter:description', content: 'Passionate Software Engineer crafting high-performance APIs, intuitive admin panels, and AI-powered solutions.' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://sandipghodasara.com' },
+  ],
+})
+
+// JSON-LD Structured Data
+useSeoMeta({
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      'name': 'Sandip Ghodasara',
+      'alternateName': 'Sandip',
+      'givenName': 'Sandip',
+      'familyName': 'Ghodasara',
+      'jobTitle': 'Senior Software Engineer',
+      'description': 'Passionate Software Engineer crafting high-performance APIs, intuitive admin panels, and AI-powered solutions.',
+      'url': 'https://sandipghodasara.com',
+      'telephone': '+919173420297',
+      'email': 'ghodasarasandip011@gmail.com',
+      'sameAs': [
+        'https://linkedin.com/in/sandipghodasara',
+        'https://github.com/sandipghodasara',
+      ],
+      'worksFor': {
+        '@type': 'Organization',
+        'name': 'Intelivita Private Limited',
+        'url': 'https://intelivita.com',
+      },
+      'knowsAbout': [
+        'Laravel',
+        'Vue.js',
+        'React',
+        'Node.js',
+        'TypeScript',
+        'JavaScript',
+        'API Development',
+        'Web Development',
+        'Full Stack Development',
+        'Software Engineering',
+      ],
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Ahmedabad',
+        'addressRegion': 'Gujarat',
+        'addressCountry': 'IN',
+        'postalCode': '380061',
+      },
+      'nationality': 'Indian',
+      'alumniOf': {
+        '@type': 'Organization',
+        'name': 'Web Development Education',
+      },
+      'hasOccupation': {
+        '@type': 'Occupation',
+        'name': 'Senior Software Engineer',
+        'occupationLocation': {
+          '@type': 'City',
+          'name': 'Ahmedabad',
+        },
+      },
+    }),
+  },
+})
+
 const phrases = ['software developer']
 const currentText = ref('')
 let currentPhrase = 0

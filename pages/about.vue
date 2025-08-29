@@ -110,6 +110,59 @@
 </template>
 
 <script setup>
+// SEO Meta Tags
+useHead({
+  title: 'About Sandip Ghodasara - Skills & Experience | Senior Software Engineer',
+  meta: [
+    { name: 'description', content: 'Learn about Sandip Ghodasara\'s skills, experience, and expertise in Laravel, Vue.js, React, Node.js, and full-stack development. 4+ years of experience in software engineering.' },
+    { name: 'keywords', content: 'Sandip Ghodasara, Software Engineer Skills, Laravel Developer, Vue.js Developer, React Developer, Node.js Developer, Full Stack Development, Web Development Experience, Ahmedabad Developer' },
+    { property: 'og:title', content: 'About Sandip Ghodasara - Skills & Experience' },
+    { property: 'og:description', content: 'Learn about Sandip Ghodasara\'s skills, experience, and expertise in Laravel, Vue.js, React, Node.js, and full-stack development.' },
+    { property: 'og:url', content: 'https://sandipghodasara.com/about' },
+    { name: 'twitter:title', content: 'About Sandip Ghodasara - Skills & Experience' },
+    { name: 'twitter:description', content: 'Learn about Sandip Ghodasara\'s skills, experience, and expertise in Laravel, Vue.js, React, Node.js, and full-stack development.' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://sandipghodasara.com/about' },
+  ],
+})
+
+// JSON-LD Structured Data
+useSeoMeta({
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      'name': 'Sandip Ghodasara',
+      'jobTitle': 'Senior Software Engineer',
+      'description': 'Passionate Software Engineer with 4+ years of experience crafting high-performance APIs, intuitive admin panels, and AI-powered solutions.',
+      'url': 'https://sandipghodasara.com/about',
+      'knowsAbout': [
+        'Laravel',
+        'Vue.js',
+        'React',
+        'Node.js',
+        'TypeScript',
+        'JavaScript',
+        'PHP',
+        'MySQL',
+        'MongoDB',
+        'API Development',
+        'Web Development',
+        'Full Stack Development',
+      ],
+      'hasOccupation': {
+        '@type': 'Occupation',
+        'name': 'Senior Software Engineer',
+        'occupationLocation': {
+          '@type': 'City',
+          'name': 'Ahmedabad',
+        },
+      },
+    }),
+  },
+})
+
 const phrases = ['why hire me?']
 const currentText = ref('')
 let currentPhrase = 0
