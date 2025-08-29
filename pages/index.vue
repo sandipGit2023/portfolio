@@ -11,7 +11,8 @@
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white h-screen lg:min-h-screen pt-16 lg:pt-0">
       <!-- Left Column - Content (Full width on mobile) -->
       <div class="col-span-1 lg:col-span-1 flex items-center lg:justify-center justify-start w-full p-6 sm:p-6 lg:p-12">
-        <div class="w-full lg:max-w-lg animate-fade-in">
+        <div class="left-section-background">
+          <div class="w-full lg:max-w-lg animate-fade-in">
           <div class="mb-6 lg:mb-8">
             <h2 class="lg:text-2xl text-xl uppercase hidden lg:block mb-4 text-accent font-bold tracking-wider">
               <span class="block w-[200px] min-h-[1.5em] relative">
@@ -45,7 +46,9 @@
             <div class="tech-header">
               <span class="tech-label">Experience Overview</span>
               <div class="animated-line"></div>
-              <div class="tech-count">3</div>
+              <div
+                class="tech-count"
+              >3</div>
             </div>
 
             <!-- Tech Grid -->
@@ -73,6 +76,7 @@
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
 
@@ -439,12 +443,29 @@ span.invisible {
   z-index: 1;
 }
 
+/* Left Section Background */
+.left-section-background {
+  position: relative;
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.05), rgba(0, 255, 153, 0.02));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 153, 0.1);
+  transition: all 0.4s ease;
+}
+
 /* Left section hover effect */
-.tech-stats-section:hover .animated-line {
+.left-section-background:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.1), rgba(0, 255, 153, 0.05));
+  border-color: rgba(0, 255, 153, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 255, 153, 0.1);
+}
+
+.left-section-background:hover .animated-line {
   width: 80%;
 }
 
-.tech-stats-section:hover .tech-label {
+.left-section-background:hover .tech-label {
   color: #00ff99;
 }
 
@@ -569,8 +590,9 @@ span.invisible {
 /* Social Buttons Container */
 .social-buttons-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -817,6 +839,7 @@ span.invisible {
 
   /* Mobile adjustments for social buttons */
   .social-buttons-container {
+    flex-direction: column;
     gap: 1.5rem;
     margin-top: 1.5rem;
   }
@@ -833,6 +856,11 @@ span.invisible {
   .icon {
     width: 1.25rem;
     height: 1.25rem;
+  }
+
+  /* Mobile adjustments for left section */
+  .left-section-background {
+    padding: 1.5rem;
   }
 }
 </style>
