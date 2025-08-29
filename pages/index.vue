@@ -52,7 +52,6 @@
               <!-- Floating Tech Header -->
               <div class="floating-tech-header">
                 <span class="creative-tech-label">Experience Overview</span>
-                <div class="creative-animated-line"></div>
                 <div class="creative-tech-count">3</div>
               </div>
 
@@ -493,20 +492,6 @@ span.invisible {
   text-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
 }
 
-/* Creative Animated Line */
-.creative-animated-line {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #00ff99, #00ff99, transparent);
-  transition: width 0.8s ease;
-  z-index: 1;
-  border-radius: 2px;
-  box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
-}
 
 /* Creative Left Section */
 .creative-left-section {
