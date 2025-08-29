@@ -149,7 +149,7 @@ const projects = ref([
   { num: '02', name: 'Jib', description: 'AI-powered Superapp enabling no-code SaaS creation through natural language, automating content, payments, and workflow integrations.', stock: ['Laravel', 'Nuxt', 'MySQL'] },
   { num: '03', name: 'AEIS', description: 'Revolutionizing document management for critical infrastructure projects with microservices architecture, real-time collaboration, and secure data handling.', stock: ['Laravel', 'React', 'Postgres'] },
   { num: '04', name: 'Eatcard', description: 'A complete hospitality platform integrating POS, takeaway, kiosks, reservations, and delivery with real-time updates and automation.', stock: ['Laravel', 'Vue', 'MySQL'] },
-  { num: '05', name: '10/1', description: 'A comprehensive horse betting platform offering live odds, race tracking, betting analytics, and user-friendly interfaces for web and mobile.', stock: ['Laravel', 'Vue', 'Node', 'Flutter'] },
+  { num: '05', name: '10/1', description: 'A comprehensive horse betting platform offering live odds, race tracking, betting analytics, and user-friendly interfaces for web and mobile.', stock: ['Laravel', 'Vue', 'Node'] },
 ])
 
 const projectDetailDescription = ref([
