@@ -7,91 +7,6 @@
       <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-accent/8 rounded-full blur-2xl animate-pulse delay-500" />
     </div>
 
-    <!-- Floating Tech Bubbles -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <!-- Tech Bubbles - Right Side -->
-      <div class="floating-bubble" style="--delay: 0s; --duration: 8s; --x: 75%; --y: 15%; --size: 70px;">
-        <div class="bubble-content">
-          <Icon name="mdi:laravel" class="w-6 h-6 text-accent" />
-        </div>
-      </div>
-      <div class="floating-bubble" style="--delay: 2s; --duration: 10s; --x: 85%; --y: 25%; --size: 50px;">
-        <div class="bubble-content">
-          <Icon name="carbon:logo-vue" class="w-5 h-5 text-accent" />
-        </div>
-      </div>
-      <div class="floating-bubble" style="--delay: 4s; --duration: 12s; --x: 70%; --y: 45%; --size: 60px;">
-        <div class="bubble-content">
-          <Icon name="cib:react" class="w-5 h-5 text-accent" />
-        </div>
-      </div>
-      <div class="floating-bubble" style="--delay: 1s; --duration: 9s; --x: 90%; --y: 55%; --size: 45px;">
-        <div class="bubble-content">
-          <Icon name="logos:nodejs-icon" class="w-4 h-4 text-accent" />
-        </div>
-      </div>
-      <div class="floating-bubble" style="--delay: 3s; --duration: 11s; --x: 80%; --y: 70%; --size: 55px;">
-        <div class="bubble-content">
-          <Icon name="logos:nuxt-icon" class="w-5 h-5 text-accent" />
-        </div>
-      </div>
-
-      <!-- Tech Bubbles - Left Side of Image -->
-      <div class="floating-bubble" style="--delay: 0.5s; --duration: 8.5s; --x: 60%; --y: 42%; --size: 55px;">
-        <div class="bubble-content">
-          <Icon name="mdi:language-typescript" class="w-5 h-5 text-accent" />
-        </div>
-      </div>
-      <div class="floating-bubble" style="--delay: 2.5s; --duration: 10.5s; --x: 61%; --y: 55%; --size: 55px;">
-        <div class="bubble-content">
-          <Icon name="mdi:language-javascript" class="w-6 h-6 text-accent" />
-        </div>
-      </div>
-      <div class="floating-bubble" style="--delay: 1.5s; --duration: 9.5s; --x: 60%; --y: 70%; --size: 65px;">
-        <div class="bubble-content">
-          <Icon name="mdi:git" class="w-5 h-5 text-accent" />
-        </div>
-      </div>
-
-      <!-- Stats Bubbles -->
-      <div class="floating-bubble" style="--delay: 0.5s; --duration: 9.5s; --x: 68%; --y: 10%; --size: 100px;">
-        <div class="bubble-content stats-bubble">
-          <div class="text-center">
-            <div class="text-3xl font-bold text-black">
-              4+
-            </div>
-            <div class="text-sm text-black/70">
-              Years
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="floating-bubble" style="--delay: 2.5s; --duration: 11.5s; --x: 92%; --y: 30%; --size: 95px;">
-        <div class="bubble-content stats-bubble">
-          <div class="text-center">
-            <div class="text-3xl font-bold text-black">
-              6+
-            </div>
-            <div class="text-sm text-black/70">
-              Projects
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="floating-bubble" style="--delay: 4.5s; --duration: 13.5s; --x: 68%; --y: 80%; --size: 90px;">
-        <div class="bubble-content stats-bubble">
-          <div class="text-center">
-            <div class="text-3xl font-bold text-black">
-              5+
-            </div>
-            <div class="text-sm text-black/70">
-              Skills
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Grid Layout -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white h-screen lg:min-h-screen pt-16 lg:pt-0">
       <!-- Left Column - Content (Full width on mobile) -->
@@ -122,77 +37,49 @@
             </span>
           </h2>
 
-          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6 lg:mt-20 mt-8 lg:mt-12">
-            <div class="flex md:hidden flex-row gap-3 w-full justify-start">
-              <NuxtLink
-                href="/cv/Sandip_Ghodasara_Int_new.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                download="Sandip_Ghodasara_CV.pdf"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0 mobile-button-secondary social-button"
-              >
-                <Icon name="prime:download" class="w-6 h-6 lg:w-8 lg:h-8 group-hover:scale-110 transition-all duration-300" />
-              </NuxtLink>
-              <NuxtLink
-                to="https://github.com/sandipGit2023"
-                target="_blank"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0 mobile-button-secondary social-button"
-              >
-                <Icon name="prime:github" class="w-6 h-6 lg:w-8 lg:h-8 group-hover:scale-110 transition-all duration-300" />
-              </NuxtLink>
-              <NuxtLink
-                to="https://linkedin.com/in/ghodasara-sandip"
-                target="_blank"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0 mobile-button-secondary social-button"
-              >
-                <Icon
-                  name="basil:linkedin-solid"
-                  class="w-5 h-5 lg:w-6 lg:h-6 group-hover:scale-110 transition-all duration-300"
-                />
-              </NuxtLink>
+          <!-- Tech Stats Section -->
+          <div
+            class="tech-stats-section mt-8 lg:mt-12"
+          >
+            <!-- Tech Header -->
+            <div class="tech-header">
+              <span class="tech-label">Experience Overview</span>
+              <div class="tech-count">3</div>
             </div>
 
-            <NuxtLink
-              href="/cv/Sandip_Ghodasara_Int_new.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Sandip_Ghodasara_CV.pdf"
-              class="hidden md:flex group relative overflow-hidden border-2 border-white text-white font-bold py-3 lg:py-4 px-6 lg:px-8 rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer text-sm uppercase tracking-wider hover:shadow-glow w-full sm:w-auto text-center flex items-center justify-center mobile-button-primary"
-            >
-              <span class="relative z-10">Download CV</span>
-              <Icon name="prime:download" class="relative z-10 w-5 h-5 ml-2" />
-            </NuxtLink>
-
-            <div class="hidden sm:block mx-4 w-[20px] h-[1px] bg-white/30" />
-
-            <div class="hidden md:flex gap-3 lg:gap-4 w-full sm:w-auto justify-center sm:justify-start">
-              <NuxtLink
-                to="https://github.com/sandipGit2023"
-                target="_blank"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0 mobile-button-secondary social-button"
-              >
-                <Icon name="prime:github" class="w-6 h-6 lg:w-8 lg:h-8 group-hover:scale-110 transition-all duration-300" />
-              </NuxtLink>
-              <NuxtLink
-                to="https://linkedin.com/in/ghodasara-sandip"
-                target="_blank"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0 mobile-button-secondary social-button"
-              >
-                <Icon
-                  name="basil:linkedin-solid"
-                  class="w-5 h-5 lg:w-6 lg:h-6 group-hover:scale-110 transition-all duration-300"
-                />
-              </NuxtLink>
+            <!-- Tech Grid -->
+            <div class="tech-grid">
+              <div class="tech-badge" style="--delay: 0ms">
+                <div class="tech-badge-content">
+                  <span class="tech-icon">4+</span>
+                  <span class="tech-name">Years Exp</span>
+                </div>
+                <div class="tech-badge-glow"></div>
+              </div>
+              <div class="tech-badge" style="--delay: 120ms">
+                <div class="tech-badge-content">
+                  <span class="tech-icon">6+</span>
+                  <span class="tech-name">Projects</span>
+                </div>
+                <div class="tech-badge-glow"></div>
+              </div>
+              <div class="tech-badge" style="--delay: 240ms">
+                <div class="tech-badge-content">
+                  <span class="tech-icon">5+</span>
+                  <span class="tech-name">Skills</span>
+                </div>
+                <div class="tech-badge-glow"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Right Column - Creative Image Design with Interactive Stats -->
+      <!-- Right Column - Creative Image Design with Social Buttons -->
       <div class="col-span-1 lg:col-span-1 flex items-center lg:justify-center w-full p-2 sm:p-6 lg:p-12">
         <div class="w-full max-w-2xl animate-fade-in delay-500">
           <!-- Creative Image Container -->
-          <div class="relative group">
+          <div class="relative group mb-8">
             <!-- Main Image with Creative Effects -->
             <div class="relative w-56 h-56 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
               <!-- Glowing Ring Effect -->
@@ -203,6 +90,42 @@
               <div class="relative w-full h-full rounded-full bg-gradient-to-br from-accent to-accent-dark p-2">
                 <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover">
               </div>
+            </div>
+          </div>
+
+          <!-- Social Buttons Section -->
+          <div class="flex flex-col items-center space-y-4">
+            <!-- Download CV Button -->
+            <NuxtLink
+              href="/cv/Sandip_Ghodasara_Int_new.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Sandip_Ghodasara_CV.pdf"
+              class="group relative overflow-hidden border-2 border-white text-white font-bold py-3 lg:py-4 px-8 lg:px-10 rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer text-sm uppercase tracking-wider hover:shadow-glow w-full sm:w-auto text-center flex items-center justify-center"
+            >
+              <span class="relative z-10">Download CV</span>
+              <Icon name="prime:download" class="relative z-10 w-5 h-5 ml-2" />
+            </NuxtLink>
+
+            <!-- Social Icons -->
+            <div class="flex gap-4">
+              <NuxtLink
+                to="https://github.com/sandipGit2023"
+                target="_blank"
+                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0"
+              >
+                <Icon name="prime:github" class="w-6 h-6 lg:w-8 lg:h-8 group-hover:scale-110 transition-all duration-300" />
+              </NuxtLink>
+              <NuxtLink
+                to="https://linkedin.com/in/ghodasara-sandip"
+                target="_blank"
+                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0"
+              >
+                <Icon
+                  name="basil:linkedin-solid"
+                  class="w-5 h-5 lg:w-6 lg:h-6 group-hover:scale-110 transition-all duration-300"
+                />
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -460,60 +383,150 @@ span.invisible {
   animation-delay: 1000ms;
 }
 
-/* Floating Tech Bubbles */
-.floating-bubble {
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--size);
-  height: var(--size);
-  animation: float var(--duration) ease-in-out infinite;
+/* Tech Stats Section */
+.tech-stats-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Tech Header */
+.tech-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.tech-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.tech-label:hover {
+  color: #00ff99;
+}
+
+.tech-count {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.2), rgba(0, 255, 153, 0.1));
+  color: #00ff99;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(0, 255, 153, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-count:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.3), rgba(0, 255, 153, 0.2));
+  border-color: rgba(0, 255, 153, 0.5);
+}
+
+/* Tech Grid */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Tech Badge */
+.tech-badge {
+  position: relative;
+  animation: slideInFromBottom 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
   animation-delay: var(--delay);
 }
 
-.bubble-content {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 255, 153, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 255, 153, 0.3);
-  border-radius: 50%;
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tech-badge-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-badge:hover .tech-badge-content {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.15), rgba(0, 255, 153, 0.08));
+  border-color: rgba(0, 255, 153, 0.4);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 255, 153, 0.2);
+}
+
+.tech-badge-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 153, 0.1), transparent);
+  border-radius: 0.5rem;
+  opacity: 0;
+  filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover .tech-badge-glow {
+  opacity: 1;
+  filter: blur(16px);
+}
+
+/* Tech Icon */
+.tech-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.2), rgba(0, 255, 153, 0.1));
+  color: #00ff99;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 0.25rem;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
-.bubble-content:hover {
-  transform: scale(1.2);
-  background: rgba(0, 255, 153, 0.2);
-  border-color: rgba(0, 255, 153, 0.6);
-  box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+.tech-badge:hover .tech-icon {
+  background: linear-gradient(135deg, #00ff99, rgba(0, 255, 153, 0.8));
+  color: #000;
+  transform: scale(1.1);
 }
 
-.stats-bubble {
-  background: #00ff99;
-  border: 1px solid #00ff99;
+/* Tech Name */
+.tech-name {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.stats-bubble:hover {
-  background: #00e187;
-  border-color: #00e187;
-  box-shadow: 0 0 25px rgba(0, 255, 153, 0.5);
-}
-
-/* Floating animation for bubbles and tech icons */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-20px) rotate(5deg);
-  }
-  66% {
-    transform: translateY(-10px) rotate(-5deg);
-  }
+.tech-badge:hover .tech-name {
+  color: #00ff99;
+  font-weight: 600;
 }
 
 /* Responsive adjustments */
