@@ -32,7 +32,7 @@
             v-for="(tech, index) in project.stock"
             :key="index"
             class="tech-badge-compact"
-            :style="{ '--delay': `${index * 80}ms` }"
+            :style="{ '--delay': `${index * 120}ms` }"
           >
             <div class="tech-badge-content">
               <span class="tech-icon-compact">{{ tech.charAt(0) }}</span>
@@ -122,16 +122,24 @@ defineProps({
 /* Compact Tech Badge */
 .tech-badge-compact {
   position: relative;
-  animation: fadeInScale 0.5s ease-out forwards;
+  animation: slideInFromBottom 0.6s ease-out forwards;
   opacity: 0;
-  transform: scale(0.8);
+  transform: translateY(20px) scale(0.9);
   animation-delay: var(--delay);
 }
 
-@keyframes fadeInScale {
-  to {
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
