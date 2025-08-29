@@ -14,11 +14,11 @@
         <div class="creative-left-section">
           <!-- Floating Background Elements -->
           <div class="floating-bg-elements">
-            <div class="floating-orb orb-1"></div>
-            <div class="floating-orb orb-2"></div>
-            <div class="floating-orb orb-3"></div>
-            <div class="floating-line line-1"></div>
-            <div class="floating-line line-2"></div>
+            <div class="floating-orb orb-1" />
+            <div class="floating-orb orb-2" />
+            <div class="floating-orb orb-3" />
+            <div class="floating-line line-1" />
+            <div class="floating-line line-2" />
           </div>
 
           <div class="w-full max-w-full lg:max-w-lg animate-fade-in relative z-10">
@@ -47,12 +47,17 @@
               </span>
             </h2>
 
-                        <!-- Creative Tech Stats Section -->
+            <!-- Creative Tech Stats Section -->
             <div class="creative-tech-section mt-8 lg:mt-12">
               <!-- Floating Tech Header -->
               <div class="floating-tech-header p-0">
                 <span class="creative-tech-label">Experience Overview</span>
-                <div class="creative-tech-count">3</div>
+                <div class="creative-tech-count desktop-count">
+                  3
+                </div>
+                <div class="creative-tech-count mobile-count">
+                  4
+                </div>
               </div>
 
               <!-- Creative Tech Grid -->
@@ -62,36 +67,48 @@
                     <span class="creative-tech-icon">4+</span>
                     <span class="creative-tech-name">Years Exp</span>
                   </div>
-                  <div class="creative-badge-glow"></div>
+                  <div class="creative-badge-glow" />
                   <div class="creative-badge-particles">
-                    <div class="creative-particle"></div>
-                    <div class="creative-particle"></div>
+                    <div class="creative-particle" />
+                    <div class="creative-particle" />
                   </div>
-                  <div class="creative-badge-magnetic"></div>
+                  <div class="creative-badge-magnetic" />
                 </div>
                 <div class="creative-tech-badge" style="--delay: 120ms">
                   <div class="creative-badge-content">
                     <span class="creative-tech-icon">6+</span>
                     <span class="creative-tech-name">Projects</span>
                   </div>
-                  <div class="creative-badge-glow"></div>
+                  <div class="creative-badge-glow" />
                   <div class="creative-badge-particles">
-                    <div class="creative-particle"></div>
-                    <div class="creative-particle"></div>
+                    <div class="creative-particle" />
+                    <div class="creative-particle" />
                   </div>
-                  <div class="creative-badge-magnetic"></div>
+                  <div class="creative-badge-magnetic" />
                 </div>
                 <div class="creative-tech-badge" style="--delay: 240ms">
                   <div class="creative-badge-content">
                     <span class="creative-tech-icon">5+</span>
                     <span class="creative-tech-name">Skills</span>
                   </div>
-                  <div class="creative-badge-glow"></div>
+                  <div class="creative-badge-glow" />
                   <div class="creative-badge-particles">
-                    <div class="creative-particle"></div>
-                    <div class="creative-particle"></div>
+                    <div class="creative-particle" />
+                    <div class="creative-particle" />
                   </div>
-                  <div class="creative-badge-magnetic"></div>
+                  <div class="creative-badge-magnetic" />
+                </div>
+                <div class="creative-tech-badge mobile-only" style="--delay: 360ms">
+                  <div class="creative-badge-content">
+                    <span class="creative-tech-icon">3+</span>
+                    <span class="creative-tech-name">Technologies</span>
+                  </div>
+                  <div class="creative-badge-glow" />
+                  <div class="creative-badge-particles">
+                    <div class="creative-particle" />
+                    <div class="creative-particle" />
+                  </div>
+                  <div class="creative-badge-magnetic" />
                 </div>
               </div>
             </div>
@@ -121,14 +138,14 @@
                 <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover group-hover:scale-105 transition-transform duration-500">
 
                 <!-- Image Overlay Effects -->
-                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <!-- Floating Particles around image -->
                 <div class="absolute inset-0 rounded-full overflow-hidden">
-                  <div class="floating-particle particle-1"></div>
-                  <div class="floating-particle particle-2"></div>
-                  <div class="floating-particle particle-3"></div>
-                  <div class="floating-particle particle-4"></div>
+                  <div class="floating-particle particle-1" />
+                  <div class="floating-particle particle-2" />
+                  <div class="floating-particle particle-3" />
+                  <div class="floating-particle particle-4" />
                 </div>
               </div>
             </div>
@@ -149,14 +166,14 @@
                   <span class="button-text">Download CV</span>
                   <Icon name="prime:download" class="button-icon" />
                 </div>
-                <div class="button-glow"></div>
+                <div class="button-glow" />
                 <div class="button-particles">
-                  <div class="particle"></div>
-                  <div class="particle"></div>
-                  <div class="particle"></div>
+                  <div class="particle" />
+                  <div class="particle" />
+                  <div class="particle" />
                 </div>
-                <div class="button-ripple"></div>
-                <div class="button-shine"></div>
+                <div class="button-ripple" />
+                <div class="button-shine" />
               </NuxtLink>
             </div>
 
@@ -169,11 +186,11 @@
                   class="social-icon github-icon"
                 >
                   <Icon name="prime:github" class="icon" />
-                  <div class="icon-glow"></div>
-                  <div class="icon-ripple"></div>
+                  <div class="icon-glow" />
+                  <div class="icon-ripple" />
                   <div class="icon-particles">
-                    <div class="icon-particle"></div>
-                    <div class="icon-particle"></div>
+                    <div class="icon-particle" />
+                    <div class="icon-particle" />
                   </div>
                 </NuxtLink>
               </div>
@@ -184,11 +201,11 @@
                   class="social-icon linkedin-icon"
                 >
                   <Icon name="basil:linkedin-solid" class="icon" />
-                  <div class="icon-glow"></div>
-                  <div class="icon-ripple"></div>
+                  <div class="icon-glow" />
+                  <div class="icon-ripple" />
                   <div class="icon-particles">
-                    <div class="icon-particle"></div>
-                    <div class="icon-particle"></div>
+                    <div class="icon-particle" />
+                    <div class="icon-particle" />
                   </div>
                 </NuxtLink>
               </div>
@@ -495,7 +512,6 @@ span.invisible {
   color: #00ff99;
   text-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
 }
-
 
 /* Creative Left Section */
 .creative-left-section {
@@ -865,6 +881,20 @@ span.invisible {
   opacity: 0;
   transform: translateY(30px) scale(0.8);
   animation-delay: var(--delay);
+}
+
+/* Mobile-only badge - hidden on desktop */
+.mobile-only {
+  display: none;
+}
+
+/* Count display for different screen sizes */
+.mobile-count {
+  display: none;
+}
+
+.desktop-count {
+  display: block;
 }
 
 @keyframes creativeSlideIn {
@@ -1391,6 +1421,20 @@ span.invisible {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
+  }
+
+  /* Show mobile-only badge on mobile */
+  .mobile-only {
+    display: block !important;
+  }
+
+  /* Show mobile count and hide desktop count on mobile */
+  .mobile-count {
+    display: block !important;
+  }
+
+  .desktop-count {
+    display: none !important;
   }
 
   /* Floating elements mobile adjustments */
