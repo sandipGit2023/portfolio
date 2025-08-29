@@ -11,72 +11,92 @@
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 text-white h-screen lg:min-h-screen pt-16 lg:pt-0">
       <!-- Left Column - Content (Full width on mobile) -->
       <div class="col-span-1 lg:col-span-1 flex items-center lg:justify-center justify-start w-full p-6 sm:p-6 lg:p-12">
-        <div class="left-section-background">
-          <div class="w-full lg:max-w-lg animate-fade-in">
-          <div class="mb-6 lg:mb-8">
-            <h2 class="lg:text-2xl text-xl uppercase hidden lg:block mb-4 text-accent font-bold tracking-wider">
+        <div class="creative-left-section">
+          <!-- Floating Background Elements -->
+          <div class="floating-bg-elements">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+            <div class="floating-line line-1"></div>
+            <div class="floating-line line-2"></div>
+          </div>
+
+          <div class="w-full lg:max-w-lg animate-fade-in relative z-10">
+            <div class="mb-6 lg:mb-8">
+              <h2 class="lg:text-2xl text-xl uppercase hidden lg:block mb-4 text-accent font-bold tracking-wider">
+                <span class="block w-[200px] min-h-[1.5em] relative">
+                  <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
+                  <span class="invisible">software developer</span>
+                </span>
+              </h2>
+            </div>
+
+            <div class="space-y-3 lg:space-y-4 mb-8 lg:mb-12">
+              <h1 class="lg:text-8xl text-4xl sm:text-5xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
+                Hello, I'm
+              </h1>
+              <h1 class="lg:text-8xl text-4xl sm:text-5xl capitalize leading-tight font-black text-accent animate-slide-up delay-200">
+                Sandip
+              </h1>
+            </div>
+
+            <h2 class="lg:text-2xl text-xl uppercase block lg:hidden mt-4 lg:mt-6 mb-6 lg:mb-8 text-accent font-bold">
               <span class="block w-[200px] min-h-[1.5em] relative">
                 <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
                 <span class="invisible">software developer</span>
               </span>
             </h2>
-          </div>
 
-          <div class="space-y-3 lg:space-y-4 mb-8 lg:mb-12">
-            <h1 class="lg:text-8xl text-4xl sm:text-5xl capitalize leading-tight font-black bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent animate-slide-up">
-              Hello, I'm
-            </h1>
-            <h1 class="lg:text-8xl text-4xl sm:text-5xl capitalize leading-tight font-black text-accent animate-slide-up delay-200">
-              Sandip
-            </h1>
-          </div>
-
-          <h2 class="lg:text-2xl text-xl uppercase block lg:hidden mt-4 lg:mt-6 mb-6 lg:mb-8 text-accent font-bold">
-            <span class="block w-[200px] min-h-[1.5em] relative">
-              <span class="typing top-0 left-0 absolute">{{ currentText }}</span>
-              <span class="invisible">software developer</span>
-            </span>
-          </h2>
-
-          <!-- Tech Stats Section -->
-          <div
-            class="tech-stats-section mt-8 lg:mt-12"
-          >
-            <!-- Tech Header -->
-            <div class="tech-header">
-              <span class="tech-label">Experience Overview</span>
-              <div class="animated-line"></div>
-              <div
-                class="tech-count"
-              >3</div>
-            </div>
-
-            <!-- Tech Grid -->
-            <div class="tech-grid">
-              <div class="tech-badge" style="--delay: 0ms">
-                <div class="tech-badge-content">
-                  <span class="tech-icon">4+</span>
-                  <span class="tech-name">Years Exp</span>
-                </div>
-                <div class="tech-badge-glow"></div>
+            <!-- Creative Tech Stats Section -->
+            <div class="creative-tech-section mt-8 lg:mt-12">
+              <!-- Floating Tech Header -->
+              <div class="floating-tech-header">
+                <span class="creative-tech-label">Experience Overview</span>
+                <div class="creative-animated-line"></div>
+                <div class="creative-tech-count">3</div>
               </div>
-              <div class="tech-badge" style="--delay: 120ms">
-                <div class="tech-badge-content">
-                  <span class="tech-icon">6+</span>
-                  <span class="tech-name">Projects</span>
+
+              <!-- Creative Tech Grid -->
+              <div class="creative-tech-grid">
+                <div class="creative-tech-badge" style="--delay: 0ms">
+                  <div class="creative-badge-content">
+                    <span class="creative-tech-icon">4+</span>
+                    <span class="creative-tech-name">Years Exp</span>
+                  </div>
+                  <div class="creative-badge-glow"></div>
+                  <div class="creative-badge-ripple"></div>
+                  <div class="creative-badge-particles">
+                    <div class="creative-particle"></div>
+                    <div class="creative-particle"></div>
+                  </div>
                 </div>
-                <div class="tech-badge-glow"></div>
-              </div>
-              <div class="tech-badge" style="--delay: 240ms">
-                <div class="tech-badge-content">
-                  <span class="tech-icon">5+</span>
-                  <span class="tech-name">Skills</span>
+                <div class="creative-tech-badge" style="--delay: 120ms">
+                  <div class="creative-badge-content">
+                    <span class="creative-tech-icon">6+</span>
+                    <span class="creative-tech-name">Projects</span>
+                  </div>
+                  <div class="creative-badge-glow"></div>
+                  <div class="creative-badge-ripple"></div>
+                  <div class="creative-badge-particles">
+                    <div class="creative-particle"></div>
+                    <div class="creative-particle"></div>
+                  </div>
                 </div>
-                <div class="tech-badge-glow"></div>
+                <div class="creative-tech-badge" style="--delay: 240ms">
+                  <div class="creative-badge-content">
+                    <span class="creative-tech-icon">5+</span>
+                    <span class="creative-tech-name">Skills</span>
+                  </div>
+                  <div class="creative-badge-glow"></div>
+                  <div class="creative-badge-ripple"></div>
+                  <div class="creative-badge-particles">
+                    <div class="creative-particle"></div>
+                    <div class="creative-particle"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -87,13 +107,30 @@
           <div class="relative group mb-8">
             <!-- Main Image with Creative Effects -->
             <div class="relative w-56 h-56 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
-              <!-- Glowing Ring Effect -->
+              <!-- Outer Glowing Ring Effect -->
               <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-dark to-accent animate-spin-slow opacity-30" />
               <div class="absolute inset-4 rounded-full bg-gradient-to-br from-accent/20 to-transparent backdrop-blur-sm" />
 
-              <!-- Main Image -->
-              <div class="relative w-full h-full rounded-full bg-gradient-to-br from-accent to-accent-dark p-2">
-                <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover">
+              <!-- Middle Ring with Pulse Effect -->
+              <div class="absolute inset-8 rounded-full border-2 border-accent/40 animate-pulse" />
+
+              <!-- Inner Glow Ring -->
+              <div class="absolute inset-12 rounded-full bg-gradient-to-br from-accent/30 to-transparent" />
+
+              <!-- Main Image Container -->
+              <div class="relative w-full h-full rounded-full bg-gradient-to-br from-accent to-accent-dark p-2 group-hover:p-3 transition-all duration-500">
+                <img src="@/assets/images/sandip_img.png" alt="Sandip Ghodasara" class="w-full h-full rounded-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+                <!-- Image Overlay Effects -->
+                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <!-- Floating Particles around image -->
+                <div class="absolute inset-0 rounded-full overflow-hidden">
+                  <div class="floating-particle particle-1"></div>
+                  <div class="floating-particle particle-2"></div>
+                  <div class="floating-particle particle-3"></div>
+                  <div class="floating-particle particle-4"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -119,6 +156,8 @@
                   <div class="particle"></div>
                   <div class="particle"></div>
                 </div>
+                <div class="button-ripple"></div>
+                <div class="button-shine"></div>
               </NuxtLink>
             </div>
 
@@ -133,6 +172,10 @@
                   <Icon name="prime:github" class="icon" />
                   <div class="icon-glow"></div>
                   <div class="icon-ripple"></div>
+                  <div class="icon-particles">
+                    <div class="icon-particle"></div>
+                    <div class="icon-particle"></div>
+                  </div>
                 </NuxtLink>
               </div>
               <div class="social-icon-wrapper">
@@ -144,6 +187,10 @@
                   <Icon name="basil:linkedin-solid" class="icon" />
                   <div class="icon-glow"></div>
                   <div class="icon-ripple"></div>
+                  <div class="icon-particles">
+                    <div class="icon-particle"></div>
+                    <div class="icon-particle"></div>
+                  </div>
                 </NuxtLink>
               </div>
             </div>
@@ -403,188 +450,342 @@ span.invisible {
   animation-delay: 1000ms;
 }
 
-/* Tech Stats Section */
-.tech-stats-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+/* Custom spin animation for image effects */
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
 }
 
-/* Tech Header */
-.tech-header {
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Creative Tech Stats Section */
+.creative-tech-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Floating Tech Header */
+.floating-tech-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   position: relative;
 }
 
-.tech-label {
-  color: rgba(255, 255, 255, 0.6);
+.creative-tech-label {
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
+  text-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
 }
 
-/* Animated Line */
-.animated-line {
+/* Creative Animated Line */
+.creative-animated-line {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #00ff99, transparent);
-  transition: width 0.6s ease;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00ff99, #00ff99, transparent);
+  transition: width 0.8s ease;
+  z-index: 1;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+}
+
+/* Creative Left Section */
+.creative-left-section {
+  position: relative;
+  padding: 2rem;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+/* Floating Background Elements */
+.floating-bg-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   z-index: 1;
 }
 
-/* Left Section Background */
-.left-section-background {
-  position: relative;
-  padding: 2rem;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(0, 255, 153, 0.05), rgba(0, 255, 153, 0.02));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 255, 153, 0.1);
-  transition: all 0.4s ease;
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 255, 153, 0.1), transparent);
+  animation: floatOrb 6s ease-in-out infinite;
 }
 
-/* Left section hover effect */
-.left-section-background:hover {
-  background: linear-gradient(135deg, rgba(0, 255, 153, 0.1), rgba(0, 255, 153, 0.05));
-  border-color: rgba(0, 255, 153, 0.2);
-  box-shadow: 0 20px 40px rgba(0, 255, 153, 0.1);
+.orb-1 {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
 }
 
-.left-section-background:hover .animated-line {
-  width: 80%;
+.orb-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
 }
 
-.left-section-background:hover .tech-label {
-  color: #00ff99;
+.orb-3 {
+  width: 60px;
+  height: 60px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
 }
 
-.tech-count {
-  background: linear-gradient(135deg, rgba(0, 255, 153, 0.2), rgba(0, 255, 153, 0.1));
+.floating-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 153, 0.3), transparent);
+  animation: floatLine 8s ease-in-out infinite;
+}
+
+.line-1 {
+  width: 2px;
+  height: 100px;
+  top: 30%;
+  right: 25%;
+  animation-delay: 1s;
+}
+
+.line-2 {
+  width: 100px;
+  height: 2px;
+  bottom: 40%;
+  left: 5%;
+  animation-delay: 3s;
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(20px, -30px) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+@keyframes floatLine {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(10px, -15px) rotate(5deg);
+    opacity: 0.5;
+  }
+}
+
+.creative-tech-count {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.3), rgba(0, 255, 153, 0.15));
   color: #00ff99;
   font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.375rem;
-  border: 1px solid rgba(0, 255, 153, 0.3);
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(0, 255, 153, 0.4);
   transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+  text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
-.tech-count:hover {
-  background: linear-gradient(135deg, rgba(0, 255, 153, 0.3), rgba(0, 255, 153, 0.2));
-  border-color: rgba(0, 255, 153, 0.5);
+.creative-tech-count:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.4), rgba(0, 255, 153, 0.25));
+  border-color: rgba(0, 255, 153, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 153, 0.3);
 }
 
-/* Tech Grid */
-.tech-grid {
+/* Creative Tech Grid */
+.creative-tech-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
+  position: relative;
 }
 
-/* Tech Badge */
-.tech-badge {
+/* Creative Tech Badge */
+.creative-tech-badge {
   position: relative;
-  animation: slideInFromBottom 0.6s ease-out forwards;
+  animation: creativeSlideIn 0.8s ease-out forwards;
   opacity: 0;
-  transform: translateY(20px) scale(0.9);
+  transform: translateY(30px) scale(0.8);
   animation-delay: var(--delay);
 }
 
-@keyframes slideInFromBottom {
+@keyframes creativeSlideIn {
   0% {
     opacity: 0;
-    transform: translateY(20px) scale(0.9);
+    transform: translateY(30px) scale(0.8) rotate(-5deg);
   }
   50% {
-    opacity: 0.7;
-    transform: translateY(-5px) scale(1.05);
+    opacity: 0.8;
+    transform: translateY(-8px) scale(1.1) rotate(2deg);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1) rotate(0deg);
   }
 }
 
-.tech-badge-content {
+.creative-badge-content {
   position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.tech-badge:hover .tech-badge-content {
-  background: linear-gradient(135deg, rgba(0, 255, 153, 0.15), rgba(0, 255, 153, 0.08));
-  border-color: rgba(0, 255, 153, 0.4);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(0, 255, 153, 0.2);
+.creative-tech-badge:hover .creative-badge-content {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.25), rgba(0, 255, 153, 0.12));
+  border-color: rgba(0, 255, 153, 0.6);
+  transform: translateY(-6px) scale(1.08) rotate(2deg);
+  box-shadow: 0 20px 50px rgba(0, 255, 153, 0.4), 0 0 40px rgba(0, 255, 153, 0.3);
 }
 
-.tech-badge-glow {
+.creative-badge-glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(0, 255, 153, 0.1), transparent);
-  border-radius: 0.5rem;
+  background: radial-gradient(circle at center, rgba(0, 255, 153, 0.2), transparent);
+  border-radius: 1rem;
   opacity: 0;
-  filter: blur(12px);
-  transition: all 0.3s ease;
+  filter: blur(20px);
+  transition: all 0.4s ease;
 }
 
-.tech-badge:hover .tech-badge-glow {
+.creative-tech-badge:hover .creative-badge-glow {
   opacity: 1;
-  filter: blur(16px);
+  filter: blur(25px);
 }
 
-/* Tech Icon */
-.tech-icon {
+.creative-badge-ripple {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  border: 3px solid transparent;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.creative-tech-badge:hover .creative-badge-ripple {
+  border-color: rgba(0, 255, 153, 0.4);
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.creative-badge-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.creative-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00ff99;
+  border-radius: 50%;
+  opacity: 0;
+  animation: creativeParticleFloat 3s ease-out infinite;
+}
+
+.creative-particle:nth-child(1) {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.creative-particle:nth-child(2) {
+  top: 70%;
+  right: 20%;
+  animation-delay: 1.5s;
+}
+
+@keyframes creativeParticleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-15px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0);
+  }
+}
+
+/* Creative Tech Icon */
+.creative-tech-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: linear-gradient(135deg, rgba(0, 255, 153, 0.2), rgba(0, 255, 153, 0.1));
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.3), rgba(0, 255, 153, 0.15));
   color: #00ff99;
-  font-size: 0.75rem;
-  font-weight: 700;
-  border-radius: 0.25rem;
-  transition: all 0.3s ease;
-}
-
-.tech-badge:hover .tech-icon {
-  background: linear-gradient(135deg, #00ff99, rgba(0, 255, 153, 0.8));
-  color: #000;
-  transform: scale(1.1);
-}
-
-/* Tech Name */
-.tech-name {
-  color: rgba(255, 255, 255, 0.9);
   font-size: 0.875rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: 800;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 153, 0.3);
+  text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
-.tech-badge:hover .tech-name {
-  color: #00ff99;
+.creative-tech-badge:hover .creative-tech-icon {
+  background: linear-gradient(135deg, #00ff99, rgba(0, 255, 153, 0.9));
+  color: #000;
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(0, 255, 153, 0.5);
+}
+
+/* Creative Tech Name */
+.creative-tech-name {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.875rem;
   font-weight: 600;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.creative-tech-badge:hover .creative-tech-name {
+  color: #00ff99;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0, 255, 153, 0.6);
 }
 
 /* Social Buttons Container */
@@ -623,10 +824,10 @@ span.invisible {
 }
 
 .cv-button:hover {
-  background: linear-gradient(135deg, rgba(0, 255, 153, 0.2), rgba(0, 255, 153, 0.1));
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.25), rgba(0, 255, 153, 0.15));
   border-color: #00ff99;
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(0, 255, 153, 0.3);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 255, 153, 0.4), 0 0 40px rgba(0, 255, 153, 0.2);
 }
 
 .button-content {
@@ -788,6 +989,133 @@ span.invisible {
   border-color: #00ff99;
   opacity: 1;
   transform: scale(1.3);
+}
+
+.icon-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.icon-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00ff99;
+  border-radius: 50%;
+  opacity: 0;
+  animation: iconParticleFloat 2s ease-out infinite;
+}
+
+.icon-particle:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.icon-particle:nth-child(2) {
+  top: 60%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+@keyframes iconParticleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+/* Floating Particles around Image */
+.floating-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #00ff99;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: floatAround 4s ease-in-out infinite;
+}
+
+.particle-1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.particle-3 {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.particle-4 {
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes floatAround {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(20px, -15px) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-10px, -25px) scale(0.8);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(-20px, 10px) scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+/* Enhanced Button Effects */
+.button-ripple {
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.cv-button:hover .button-ripple {
+  border-color: rgba(0, 255, 153, 0.5);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.button-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.cv-button:hover .button-shine {
+  left: 100%;
 }
 
 /* GitHub specific styles */
