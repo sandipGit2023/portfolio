@@ -44,6 +44,7 @@
             <!-- Tech Header -->
             <div class="tech-header">
               <span class="tech-label">Experience Overview</span>
+              <div class="animated-line"></div>
               <div class="tech-count">3</div>
             </div>
 
@@ -94,38 +95,53 @@
           </div>
 
           <!-- Social Buttons Section -->
-          <div class="flex flex-col items-center space-y-4">
+          <div class="social-buttons-container">
             <!-- Download CV Button -->
-            <NuxtLink
-              href="/cv/Sandip_Ghodasara_Int_new.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Sandip_Ghodasara_CV.pdf"
-              class="group relative overflow-hidden border-2 border-white text-white font-bold py-3 lg:py-4 px-8 lg:px-10 rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer text-sm uppercase tracking-wider hover:shadow-glow w-full sm:w-auto text-center flex items-center justify-center"
-            >
-              <span class="relative z-10">Download CV</span>
-              <Icon name="prime:download" class="relative z-10 w-5 h-5 ml-2" />
-            </NuxtLink>
+            <div class="cv-button-wrapper">
+              <NuxtLink
+                href="/cv/Sandip_Ghodasara_Int_new.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="Sandip_Ghodasara_CV.pdf"
+                class="cv-button group"
+              >
+                <div class="button-content">
+                  <span class="button-text">Download CV</span>
+                  <Icon name="prime:download" class="button-icon" />
+                </div>
+                <div class="button-glow"></div>
+                <div class="button-particles">
+                  <div class="particle"></div>
+                  <div class="particle"></div>
+                  <div class="particle"></div>
+                </div>
+              </NuxtLink>
+            </div>
 
             <!-- Social Icons -->
-            <div class="flex gap-4">
-              <NuxtLink
-                to="https://github.com/sandipGit2023"
-                target="_blank"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0"
-              >
-                <Icon name="prime:github" class="w-6 h-6 lg:w-8 lg:h-8 group-hover:scale-110 transition-all duration-300" />
-              </NuxtLink>
-              <NuxtLink
-                to="https://linkedin.com/in/ghodasara-sandip"
-                target="_blank"
-                class="group relative overflow-hidden border-2 border-white text-white font-bold w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full hover:bg-accent-hover hover:border-accent hover:text-black transition-all duration-500 cursor-pointer hover:shadow-glow flex-shrink-0"
-              >
-                <Icon
-                  name="basil:linkedin-solid"
-                  class="w-5 h-5 lg:w-6 lg:h-6 group-hover:scale-110 transition-all duration-300"
-                />
-              </NuxtLink>
+            <div class="social-icons-container">
+              <div class="social-icon-wrapper">
+                <NuxtLink
+                  to="https://github.com/sandipGit2023"
+                  target="_blank"
+                  class="social-icon github-icon"
+                >
+                  <Icon name="prime:github" class="icon" />
+                  <div class="icon-glow"></div>
+                  <div class="icon-ripple"></div>
+                </NuxtLink>
+              </div>
+              <div class="social-icon-wrapper">
+                <NuxtLink
+                  to="https://linkedin.com/in/ghodasara-sandip"
+                  target="_blank"
+                  class="social-icon linkedin-icon"
+                >
+                  <Icon name="basil:linkedin-solid" class="icon" />
+                  <div class="icon-glow"></div>
+                  <div class="icon-ripple"></div>
+                </NuxtLink>
+              </div>
             </div>
           </div>
         </div>
@@ -396,6 +412,7 @@ span.invisible {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 0;
+  position: relative;
 }
 
 .tech-label {
@@ -405,9 +422,29 @@ span.invisible {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
-.tech-label:hover {
+/* Animated Line */
+.animated-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ff99, transparent);
+  transition: width 0.6s ease;
+  z-index: 1;
+}
+
+/* Left section hover effect */
+.tech-stats-section:hover .animated-line {
+  width: 80%;
+}
+
+.tech-stats-section:hover .tech-label {
   color: #00ff99;
 }
 
@@ -529,6 +566,218 @@ span.invisible {
   font-weight: 600;
 }
 
+/* Social Buttons Container */
+.social-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* CV Button Styles */
+.cv-button-wrapper {
+  position: relative;
+}
+
+.cv-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.cv-button:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.2), rgba(0, 255, 153, 0.1));
+  border-color: #00ff99;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 255, 153, 0.3);
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.button-text {
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.cv-button:hover .button-icon {
+  transform: translateX(3px) scale(1.1);
+}
+
+.button-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 153, 0.2), transparent);
+  border-radius: 50px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.cv-button:hover .button-glow {
+  opacity: 1;
+}
+
+.button-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00ff99;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particleFloat 2s ease-out infinite;
+}
+
+.particle:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 60%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+.particle:nth-child(3) {
+  bottom: 30%;
+  left: 50%;
+  animation-delay: 1s;
+}
+
+@keyframes particleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0);
+  }
+}
+
+/* Social Icons Container */
+.social-icons-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social-icon-wrapper {
+  position: relative;
+}
+
+.social-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.2), rgba(0, 255, 153, 0.1));
+  border-color: #00ff99;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 255, 153, 0.3);
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover .icon {
+  transform: scale(1.2);
+}
+
+.icon-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 153, 0.3), transparent);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.social-icon:hover .icon-glow {
+  opacity: 1;
+}
+
+.icon-ripple {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.social-icon:hover .icon-ripple {
+  border-color: #00ff99;
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* GitHub specific styles */
+.github-icon:hover {
+  background: linear-gradient(135deg, rgba(36, 41, 46, 0.9), rgba(36, 41, 46, 0.7));
+}
+
+/* LinkedIn specific styles */
+.linkedin-icon:hover {
+  background: linear-gradient(135deg, rgba(0, 119, 181, 0.9), rgba(0, 119, 181, 0.7));
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .floating-bubble {
@@ -564,6 +813,26 @@ span.invisible {
 
   .p-2 {
     padding: 0.5rem !important;
+  }
+
+  /* Mobile adjustments for social buttons */
+  .social-buttons-container {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .cv-button {
+    padding: 0.875rem 1.5rem;
+  }
+
+  .social-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 }
 </style>
